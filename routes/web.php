@@ -24,7 +24,7 @@ Route::get('/', [\App\Http\Controllers\IndexController::class, 'showIndex'])->na
 Route::get('/login', [\App\Http\Controllers\LoginController::class, 'showLogin'])->name('layout.login');
 Route::post('/login', [\App\Http\Controllers\LoginController::class, 'login'])->name('layout.login');
 
-Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'showDashboard'])->name('admin.layout.login');
+Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'showDashboard'])->name('admin.layout.dashboard');
 
 Route::get('register', [\App\Http\Controllers\LoginController::class, 'register'])->name('admin.layout.register');
 Route::post('register', [\App\Http\Controllers\LoginController::class, 'postRegister']);
