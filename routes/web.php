@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/admin', function () {
+    return view('admin.layout.dashboard');
 });
+
+Route::get('/login', [\App\Http\Controllers\LoginController::class, 'showLogin'])->name('layout.login');
+//Route::post('/login', )
+
