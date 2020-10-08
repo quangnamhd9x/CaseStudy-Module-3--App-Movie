@@ -167,7 +167,7 @@
                                                                 </div>
                                                             </div>
                                                         </a>
-                                                        <a href="login.html" class="iq-sub-card setting-dropdown">
+                                                        <a href="{{route('layout.login')}}" class="iq-sub-card setting-dropdown">
                                                             <div class="media align-items-center">
                                                                 <div class="right-icon">
                                                                     <i class="ri-logout-circle-line text-primary"></i>
@@ -286,7 +286,7 @@
                                                         </div>
                                                     </div>
                                                 </a>
-                                                <a href="login.html" class="iq-sub-card setting-dropdown">
+                                                <a href="{{route('layout.login')}}" class="iq-sub-card setting-dropdown">
                                                     <div class="media align-items-center">
                                                         <div class="right-icon">
                                                             <i class="ri-logout-circle-line text-primary"></i>
