@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 
-<!-- Mirrored from iqonic.design/themes/streamitnew/dashboard/html/theme/sign-in.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Sep 2020 07:06:14 GMT -->
+<!-- Mirrored from iqonic.design/themes/streamitnew/dashboard/html/theme/sign-up.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Sep 2020 07:06:14 GMT -->
 <head>
     <base href="{{asset('/')}}">
     <!-- Required meta tags -->
@@ -34,31 +34,31 @@
                 <div class="sign-user_card ">
                     <div class="sign-in-page-data">
                         <div class="sign-in-from w-100 m-auto">
-                            <h3 class="mb-3 text-center">Sign in</h3>
-                            <form class="mt-4" method="post">
+                            <h3 class="mb-3 text-center">Sign Up</h3>
+                            <form class="mt-4" action="" method="post">
                                 @csrf
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control mb-0" id="exampleInputText" placeholder="Enter Full Name" autocomplete="off" required>
+                                </div>
                                 <div class="form-group">
                                     <input type="email" name="email" class="form-control mb-0" id="exampleInputEmail2" placeholder="Enter email" autocomplete="off" required>
                                 </div>
                                 <div class="form-group">
                                     <input type="password" name="password" class="form-control mb-0" id="exampleInputPassword2" placeholder="Password" required>
                                 </div>
-                                <div class="sign-info">
-                                    <button type="submit" class="btn btn-primary">Sign in</button>
-                                    <div class="custom-control custom-checkbox d-inline-block">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck">
-                                        <label class="custom-control-label" for="customCheck">Remember Me</label>
-                                    </div>
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck">
+                                    <label class="custom-control-label" for="customCheck">I accept <a href="#" class="text-primary"> Terms and Conditions</a></label>
                                 </div>
+
+                                <button type="submit" class="btn btn-primary">Sign Up</button>
+
                             </form>
                         </div>
                     </div>
                     <div class="mt-3">
                         <div class="d-flex justify-content-center links">
-                            Don't have an account? <a href="{{route('admin.layout.register')}}" class="text-primary ml-2">Sign Up</a>
-                        </div>
-                        <div class="d-flex justify-content-center links">
-                            <a href="pages-recoverpw.html" class="f-link">Forgot your password?</a>
+                            Already have an account? <a href="sign-in.html" class="text-primary ml-2">Sign In</a>
                         </div>
                     </div>
                 </div>
@@ -69,6 +69,7 @@
     </div>
 </section>
 <!-- Sign in END -->
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="admin_resource/assets/js/jquery.min.js"></script>
@@ -97,5 +98,5 @@
 <script src="admin_resource/assets/js/custom.js"></script>
 </body>
 
-<!-- Mirrored from iqonic.design/themes/streamitnew/dashboard/html/theme/sign-in.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Sep 2020 07:06:14 GMT -->
+<!-- Mirrored from iqonic.design/themes/streamitnew/dashboard/html/theme/sign-up.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Sep 2020 07:06:14 GMT -->
 </html>

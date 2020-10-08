@@ -141,7 +141,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/index_resource" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -151,6 +151,7 @@
       <recent name="$PROJECT_DIR$/resources/views/admin/layout" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/index_resource" />
       <recent name="$PROJECT_DIR$/public/admin" />
     </key>
   </component>
@@ -168,7 +169,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602146302934</updated>
-      <workItem from="1602146304265" duration="5318000" />
+      <workItem from="1602146304265" duration="7734000" />
     </task>
     <servers />
   </component>
@@ -203,10 +204,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1874" height="275" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1602147797536" />
-    <state x="755" y="479" width="399" height="156" key="NewPhpFileDialog" timestamp="1602147971641">
+    <state x="755" y="479" width="399" height="156" key="NewPhpFileDialog" timestamp="1602162297465">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="755" y="479" width="399" height="156" key="NewPhpFileDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1602147971641" />
+    <state x="755" y="479" width="399" height="156" key="NewPhpFileDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1602162297465" />
     <state x="449" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1602147211304">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
