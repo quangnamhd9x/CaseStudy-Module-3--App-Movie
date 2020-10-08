@@ -105,7 +105,7 @@
                                         <div class="iq-card-body p-0">
                                             <div class="iq-thumb">
                                                 <a href="javascript:void(0)">
-                                                    <img src="../assets/images/dashboard/01.jpg"
+                                                    <img src="admin_resource/assets/images/dashboard/01.jpg"
                                                          class="img-fluid w-100 img-border-radius" alt="">
                                                 </a>
                                             </div>
@@ -125,7 +125,7 @@
                                         <div class="iq-card-body p-0">
                                             <div class="iq-thumb">
                                                 <a href="javascript:void(0)">
-                                                    <img src="../assets/images/dashboard/02.jpg"
+                                                    <img src="admin_resource/assets/images/dashboard/02.jpg"
                                                          class="img-fluid w-100 img-border-radius" alt="">
                                                 </a>
                                             </div>
@@ -145,7 +145,7 @@
                                         <div class="iq-card-body p-0">
                                             <div class="iq-thumb">
                                                 <a href="javascript:void(0)">
-                                                    <img src="../assets/images/dashboard/03.jpg"
+                                                    <img src="admin_resource/assets/images/dashboard/03.jpg"
                                                          class="img-fluid w-100 img-border-radius" alt="">
                                                 </a>
                                             </div>
@@ -165,7 +165,7 @@
                                         <div class="iq-card-body p-0">
                                             <div class="iq-thumb">
                                                 <a href="javascript:void(0)">
-                                                    <img src="../assets/images/dashboard/04.jpg"
+                                                    <img src="admin_resource/assets/images/dashboard/04.jpg"
                                                          class="img-fluid w-100 img-border-radius" alt="">
                                                 </a>
                                             </div>
@@ -185,7 +185,7 @@
                                         <div class="iq-card-body p-0">
                                             <div class="iq-thumb">
                                                 <a href="javascript:void(0)">
-                                                    <img src="../assets/images/dashboard/05.jpg"
+                                                    <img src="admin_resource/assets/images/dashboard/05.jpg"
                                                          class="img-fluid w-100 img-border-radius" alt="">
                                                 </a>
                                             </div>
@@ -205,7 +205,7 @@
                                         <div class="iq-card-body p-0">
                                             <div class="iq-thumb">
                                                 <a href="javascript:void(0)">
-                                                    <img src="../assets/images/dashboard/06.jpg"
+                                                    <img src="admin_resource/assets/images/dashboard/06.jpg"
                                                          class="img-fluid w-100 img-border-radius" alt="">
                                                 </a>
                                             </div>
@@ -455,7 +455,7 @@
                                             <div class="media align-items-center">
                                                 <div class="iq-movie">
                                                     <a href="javascript:void(0);"><img
-                                                            src="../assets/images/movie-thumb/01.jpg"
+                                                            src="admin_resource/assets/images/movie-thumb/01.jpg"
                                                             class="img-border-radius avatar-40 img-fluid" alt=""></a>
                                                 </div>
                                                 <div class="media-body text-white text-left ml-3">
@@ -478,7 +478,7 @@
                                             <div class="media align-items-center">
                                                 <div class="iq-movie">
                                                     <a href="javascript:void(0);"><img
-                                                            src="../assets/images/show-thumb/05.jpg"
+                                                            src="admin_resource/assets/images/show-thumb/05.jpg"
                                                             class="img-border-radius avatar-40 img-fluid" alt=""></a>
                                                 </div>
                                                 <div class="media-body text-white text-left ml-3">
@@ -500,7 +500,7 @@
                                             <div class="media align-items-center">
                                                 <div class="iq-movie">
                                                     <a href="javascript:void(0);"><img
-                                                            src="../assets/images/show-thumb/07.jpg"
+                                                            src="admin_resource/assets/images/show-thumb/07.jpg"
                                                             class="img-border-radius avatar-40 img-fluid" alt=""></a>
                                                 </div>
                                                 <div class="media-body text-white text-left ml-3">
@@ -522,7 +522,7 @@
                                             <div class="media align-items-center">
                                                 <div class="iq-movie">
                                                     <a href="javascript:void(0);"><img
-                                                            src="../assets/images/show-thumb/10.jpg"
+                                                            src="admin_resource/assets/images/show-thumb/10.jpg"
                                                             class="img-border-radius avatar-40 img-fluid" alt=""></a>
                                                 </div>
                                                 <div class="media-body text-white text-left ml-3">
@@ -544,7 +544,7 @@
                                             <div class="media align-items-center">
                                                 <div class="iq-movie">
                                                     <a href="javascript:void(0);"><img
-                                                            src="../assets/images/show-thumb/04.jpg"
+                                                            src="admin_resource/assets/images/show-thumb/04.jpg"
                                                             class="img-border-radius avatar-40 img-fluid" alt=""></a>
                                                 </div>
                                                 <div class="media-body text-white text-left ml-3">

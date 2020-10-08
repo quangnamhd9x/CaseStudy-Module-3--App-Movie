@@ -405,7 +405,7 @@
                                             </div>
                                         </a>
                                         <div class="d-inline-block w-100 text-center p-3">
-                                            <a class="bg-primary iq-sign-btn" href="sign-in.html" role="button">Sign out<i class="ri-login-box-line ml-2"></i></a>
+                                            <a class="bg-primary iq-sign-btn" href="{{route('layout.login')}}" role="button">Sign out<i class="ri-login-box-line ml-2"></i></a>
                                         </div>
                                     </div>
                                 </div>
