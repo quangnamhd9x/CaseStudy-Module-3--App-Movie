@@ -3,6 +3,7 @@
 
 <!-- Mirrored from iqonic.design/themes/streamitnew/dashboard/html/theme/sign-in.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Sep 2020 07:06:14 GMT -->
 <head>
+    <base href="{{asset('/')}}">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -34,12 +35,13 @@
                     <div class="sign-in-page-data">
                         <div class="sign-in-from w-100 m-auto">
                             <h3 class="mb-3 text-center">Sign in</h3>
-                            <form class="mt-4" action="https://iqonic.design/themes/streamitnew/dashboard/html/theme/index.html">
+                            <form class="mt-4" method="post">
+                                @csrf
                                 <div class="form-group">
-                                    <input type="email" class="form-control mb-0" id="exampleInputEmail2" placeholder="Enter email" autocomplete="off" required>
+                                    <input type="email" name="email" class="form-control mb-0" id="exampleInputEmail2" placeholder="Enter email" autocomplete="off" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control mb-0" id="exampleInputPassword2" placeholder="Password" required>
+                                    <input type="password" name="password" class="form-control mb-0" id="exampleInputPassword2" placeholder="Password" required>
                                 </div>
                                 <div class="sign-info">
                                     <button type="submit" class="btn btn-primary">Sign in</button>
@@ -53,7 +55,7 @@
                     </div>
                     <div class="mt-3">
                         <div class="d-flex justify-content-center links">
-                            Don't have an account? <a href="sign-up.html" class="text-primary ml-2">Sign Up</a>
+                            Don't have an account? <a href="{{route('admin.layout.register')}}" class="text-primary ml-2">Sign Up</a>
                         </div>
                         <div class="d-flex justify-content-center links">
                             <a href="pages-recoverpw.html" class="f-link">Forgot your password?</a>
