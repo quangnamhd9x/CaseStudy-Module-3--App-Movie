@@ -13,11 +13,19 @@ class LoginTest extends TestCase
      *
      * @return void
      */
-    public function testExample()
+    public function testViewFormLogin()
     {
         $response = $this->get('/login');
         $response->assertStatus(200);
         $response->assertSeeText('Sign in');
         $response->assertViewIs('admin.layout.login');
+    }
+    public function testLogin(){
+        $data = [
+            'username' => "quangnamhd9x@gmail.com",
+            'password' => "123456",
+        ];
+        $response = $this->post('/login' , $data);
+        $response->assertStatus(500);
     }
 }
