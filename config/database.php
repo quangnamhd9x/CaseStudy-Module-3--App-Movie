@@ -142,6 +142,11 @@ return [
             'database' => env('REDIS_CACHE_DB', '1'),
         ],
 
+        'sqlite_testing' => [
+            'driver'   => 'sqlite',
+            'database' => ':memory:',
+            'prefix'   => '',
+        ]
     ],
 
 ];
