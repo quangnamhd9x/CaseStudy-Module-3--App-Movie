@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [\App\Http\Controllers\IndexController::class, 'showIndex'])->name('view.index');
 
 Route::get('/login', [\App\Http\Controllers\LoginController::class, 'showLogin'])->name('layout.login');
-Route::post('/login', [\App\Http\Controllers\LoginController::class, 'login'])->name('layout.login');
+Route::post('/login', [\App\Http\Controllers\LoginController::class, 'login'])->name('admin.layout.login');
 
 Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'showDashboard'])->name('admin.layout.dashboard');
 
