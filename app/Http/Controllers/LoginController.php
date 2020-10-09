@@ -19,9 +19,9 @@ class LoginController extends Controller
             'password' => $request->password,
         ];
         if (!Auth::attempt($user)){
-            return back();
-        } else {
             return redirect()->route('admin.layout.login');
+        } else {
+            return redirect()->route('admin.layout.dashboard');
         }
     }
 
