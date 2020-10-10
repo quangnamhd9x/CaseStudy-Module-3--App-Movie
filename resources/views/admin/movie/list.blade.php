@@ -30,39 +30,30 @@
                                     </thead>
                                     <tbody>
                                     @forelse($movies as $key => $movie)
+
                                     <tr>
                                         <td>
                                             <div class="media align-items-center">
                                                 <div class="iq-movie">
                                                     <a href="javascript:void(0);"><img
-                                                            src="../assets/images/movie-thumb/06.jpg"
+                                                            src=""
                                                             class="img-border-radius avatar-40 img-fluid" alt=""></a>
                                                 </div>
                                                 <div class="media-body text-white text-left ml-3">
-                                                    <p class="mb-0">Champions</p>
-                                                    <small>2h 15m</small>
+                                                    <p class="mb-0">{{$movie->title}}</p>
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>Full HD</td>
-                                        <td>Drama</td>
-                                        <td>2019</td>
-                                        <td>English</td>
+                                        <td>{{$movie->quality_id}}</td>
+                                        <td>{{$movie->category_id}}</td>
+                                        <td>{{$movie->release_year}}</td>
+                                        <td>{{$movie->language_id}}</td>
+                                        <td>{{$movie->description}}</td>
                                         <td>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus non elit
-                                                a scelerisque. Etiam feugiat luctus est,
-                                                vel commodo odio rhoncus sit amet
-                                            </p>
-                                        </td>
-                                        <td>
-                                            <div class="flex align-items-center list-user-action">
-                                                <a class="iq-bg-warning" data-toggle="tooltip" data-placement="top" title=""
-                                                   data-original-title="View" href="#"><i class="lar la-eye"></i></a>
-                                                <a class="iq-bg-success" data-toggle="tooltip" data-placement="top" title=""
-                                                   data-original-title="Edit" href="#"><i class="ri-pencil-line"></i></a>
-                                                <a class="iq-bg-primary" data-toggle="tooltip" data-placement="top" title=""
-                                                   data-original-title="Delete" href="#"><i
-                                                        class="ri-delete-bin-line"></i></a>
+                                            <div>
+                                                <a class="iq-bg-warning" data-placement="top" href="#">View</a>
+                                                <a class="iq-bg-success" data-placement="top" href="#">Edit</a>
+                                                <a class="iq-bg-primary" onclick="return confirm('Are you sure?')" data-placement="top" href="#">Delete</a>
                                             </div>
                                         </td>
                                     </tr>

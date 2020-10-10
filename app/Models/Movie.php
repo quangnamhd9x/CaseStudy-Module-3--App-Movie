@@ -22,4 +22,10 @@ class Movie extends Model
     function language(){
         return $this->belongsTo(Language::class, 'language_id');
     }
+    function quality(){
+        return $this->belongsTo(Language::class, 'quality_id');
+    }
+    function category(){
+        return $this->belongsTo(Language::class, 'category_id');
+    }
 }

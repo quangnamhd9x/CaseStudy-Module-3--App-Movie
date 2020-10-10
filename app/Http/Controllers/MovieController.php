@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Storage;
 class MovieController extends Controller
 {
     public function create(){
-        $categories = Category::all();
         $qualities = Quality::all();
+        $categories = Category::all();
         $languages = Language::all();
-        return view('admin.movie.add', compact('categories', 'qualities', 'languages'));
+        return view('admin.movie.add', compact('qualities','categories', 'languages'));
     }
 
     public function store(CreateMovie $request){
