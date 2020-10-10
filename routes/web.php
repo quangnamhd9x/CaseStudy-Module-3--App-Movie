@@ -21,5 +21,4 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
         Route::get('/', [\App\Http\Controllers\MovieController::class, 'showList'])->name('movie.list');
 
     });
-
 });

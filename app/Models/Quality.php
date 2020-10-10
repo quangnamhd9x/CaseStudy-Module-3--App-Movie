@@ -12,4 +12,7 @@ class Quality extends Model
     protected $fillable = [
         'name',
     ];
+    function movies(){
+        return $this->hasMany(Movie::class, 'quality_id');
+    }
 }
