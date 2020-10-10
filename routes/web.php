@@ -1,30 +1,25 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-//
-//Route::get('/admin', function () {
-//    return view('admin.layout.dashboard');
-//});
-//Route::get('/', function (){
-//   return view()
-//});
-Route::get('/', [\App\Http\Controllers\IndexController::class, 'showIndex'])->name('view.index');
+Route::get('/', [IndexController::class, 'showIndex'])->name('view.index');
 
-Route::get('/login', [\App\Http\Controllers\LoginController::class, 'showLogin'])->name('layout.login');
-Route::post('/login', [\App\Http\Controllers\LoginController::class, 'login'])->name('admin.layout.login');
+Route::get('/login', [LoginController::class, 'showLogin'])->name('login');
+Route::post('/login', [LoginController::class, 'login'])->name('auth.login');
 
-Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'showDashboard'])->name('admin.layout.dashboard');
+Route::get('/register', [LoginController::class, 'register'])->name('admin.layout.register');
+Route::post('/register', [LoginController::class, 'postRegister']);
 
-Route::get('register', [\App\Http\Controllers\LoginController::class, 'register'])->name('admin.layout.register');
-Route::post('register', [\App\Http\Controllers\LoginController::class, 'postRegister']);
+Route::middleware(['auth'])->prefix('admin')->group(function () {
+    Route::get('/', [DashboardController::class, 'showDashboard'])->name('admin.dashboard');
+    Route::prefix('movies')->group(function(){
+        Route::get('/add', [\App\Http\Controllers\MovieController::class, 'create'])->name('movie.create');
+        Route::post('/add', [\App\Http\Controllers\MovieController::class, 'store'])->name('movie.store');
+        Route::get('/', [\App\Http\Controllers\MovieController::class, 'showList'])->name('movie.list');
+
+    });
+
+});
