@@ -18,10 +18,12 @@ class LoginController extends Controller
             'email' => $request->email,
             'password' => $request->password,
         ];
+
         if (!Auth::attempt($user)){
-            return redirect()->route('admin.layout.login');
+            return redirect()->route('login');
         } else {
-            return redirect()->route('admin.layout.dashboard');
+
+            return redirect()->route('admin.dashboard');
         }
     }
 
@@ -35,7 +37,7 @@ class LoginController extends Controller
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
         $user->save();
-        return redirect()->route('admin.layout.login');
+        return redirect()->route('admin.login');
     }
 
 }

@@ -64,8 +64,8 @@
                     <li>
                         <a href="#movie" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-film"></i><span>Movie</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                         <ul id="movie" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                            <li><a href="add-movie.html"><i class="las la-user-plus"></i>Add Movie</a></li>
-                            <li><a href="movie-list.html"><i class="las la-eye"></i>Movie List</a></li>
+                            <li><a href="{{route('movie.create')}}"><i class="las la-user-plus"></i>Add Movie</a></li>
+                            <li><a href="{{route('movie.list')}}"><i class="las la-eye"></i>Movie List</a></li>
                         </ul>
                     </li>
                     <li>
@@ -405,7 +405,7 @@
                                             </div>
                                         </a>
                                         <div class="d-inline-block w-100 text-center p-3">
-                                            <a class="bg-primary iq-sign-btn" href="{{route('layout.login')}}" role="button">Sign out<i class="ri-login-box-line ml-2"></i></a>
+                                            <a class="bg-primary iq-sign-btn" href="{{route('login')}}" role="button">Sign out<i class="ri-login-box-line ml-2"></i></a>
                                         </div>
                                     </div>
                                 </div>
