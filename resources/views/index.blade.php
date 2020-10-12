@@ -312,6 +312,7 @@
 <!-- Header End -->
 <!-- Slider Start -->
 <section id="home" class="iq-main-slider p-0">
+{{--    @foreach($movies as $key => $movie)--}}
     <div id="home-slider" class="slider m-0 p-0">
         <div class="slide slick-bg s-bg-1">
             <div class="container-fluid position-relative h-100">
@@ -333,9 +334,9 @@
                                 dummy text ever since the 1500s.
                             </p>
                             <div class="d-flex align-items-center r-mb-23" data-animation-in="fadeInUp" data-delay-in="1.2">
-                                <a href="show-details.html" class="btn btn-hover"><i class="fa fa-play mr-2"
+                                <a href="" class="btn btn-hover"><i class="fa fa-play mr-2"
                                                                                      aria-hidden="true"></i>Play Now</a>
-                                <a href="show-details.html" class="btn btn-link">More details</a>
+                                <a href="" class="btn btn-link">More details</a>
                             </div>
                         </div>
                     </div>
@@ -375,9 +376,9 @@
                                 dummy text ever since the 1500s.
                             </p>
                             <div class="d-flex align-items-center r-mb-23" data-animation-in="fadeInUp" data-delay-in="1">
-                                <a href="movie-details.html" class="btn btn-hover"><i class="fa fa-play mr-2"
+                                <a href="" class="btn btn-hover"><i class="fa fa-play mr-2"
                                                                                       aria-hidden="true"></i>Play Now</a>
-                                <a href="movie-details.html" class="btn btn-link">More details</a>
+                                <a href="" class="btn btn-link">More details</a>
                             </div>
                         </div>
                     </div>
@@ -417,9 +418,9 @@
                                 dummy text ever since the 1500s.
                             </p>
                             <div class="d-flex align-items-center r-mb-23" data-animation-in="fadeInUp" data-delay-in="1">
-                                <a href="movie-details.html" class="btn btn-hover"><i class="fa fa-play mr-2"
+                                <a href="" class="btn btn-hover"><i class="fa fa-play mr-2"
                                                                                       aria-hidden="true"></i>Play Now</a>
-                                <a href="movie-details.html" class="btn btn-link">More details</a>
+                                <a href="" class="btn btn-link">More details</a>
                             </div>
                         </div>
                     </div>
@@ -461,18 +462,17 @@
                     </div>
                     <div class="favorites-contens">
                         <ul class="favorites-slider list-inline  row p-0 mb-0">
+                            @foreach($favorites as $key => $favorite)
                             <li class="slide-item">
-                                <a href="movie-details.html">
+{{--                                    @foreach($movies as $key => $movie)--}}
+                                <a href="{{route('view.detail')}}">
+{{--                                    @endforeach--}}
                                     <div class="block-images position-relative">
                                         <div class="img-box">
-                                            <img src="index_resource/images/favorite/01.jpg" class="img-fluid" alt="">
+                                            <img src="{{$favorite->getNameImage()}}" class="img-fluid" alt="">
                                         </div>
                                         <div class="block-description">
-                                            <h6>Champions</h6>
-                                            <div class="movie-time d-flex align-items-center my-2">
-                                                <div class="badge badge-secondary p-1 mr-2">13+</div>
-                                                <span class="text-white">2h 30m</span>
-                                            </div>
+                                            <h6>{{$favorite->title}}</h6>
                                             <div class="hover-buttons">
                                           <span class="btn btn-hover">
                                           <i class="fa fa-play mr-1" aria-hidden="true"></i>
@@ -481,130 +481,11 @@
                                             </div>
                                         </div>
                                         <div class="block-social-info">
-                                            <ul class="list-inline p-0 m-0 music-play-lists">
-                                                <li><span><i class="ri-volume-mute-fill"></i></span></li>
-                                                <li><span><i class="ri-heart-fill"></i></span></li>
-                                                <li><span><i class="ri-add-line"></i></span></li>
-                                            </ul>
                                         </div>
                                     </div>
                                 </a>
                             </li>
-                            <li class="slide-item">
-                                <a href="show-details.html">
-                                    <div class="block-images position-relative">
-                                        <div class="img-box">
-                                            <img src="index_resource/images/favorite/02.jpg" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="block-description">
-                                            <h6>Last Race</h6>
-                                            <div class="movie-time d-flex align-items-center my-2">
-                                                <div class="badge badge-secondary p-1 mr-2">7+</div>
-                                                <span class="text-white">2 Seasons</span>
-                                            </div>
-                                            <div class="hover-buttons">
-                                          <span class="btn btn-hover"><i class="fa fa-play mr-1" aria-hidden="true"></i>
-                                          Play Now
-                                          </span>
-                                            </div>
-                                        </div>
-                                        <div class="block-social-info">
-                                            <ul class="list-inline p-0 m-0 music-play-lists">
-                                                <li><span><i class="ri-volume-mute-fill"></i></span></li>
-                                                <li><span><i class="ri-heart-fill"></i></span></li>
-                                                <li><span><i class="ri-add-line"></i></span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="slide-item">
-                                <a href="movie-details.html">
-                                    <div class="block-images position-relative">
-                                        <div class="img-box">
-                                            <img src="index_resource/images/favorite/03.jpg" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="block-description">
-                                            <h6>Boop Bitty</h6>
-                                            <div class="movie-time d-flex align-items-center my-2">
-                                                <div class="badge badge-secondary p-1 mr-2">15+</div>
-                                                <span class="text-white">2h 30m</span>
-                                            </div>
-                                            <div class="hover-buttons">
-                                          <span class="btn btn-hover">
-                                          <i class="fa fa-play mr-1" aria-hidden="true"></i>
-                                          Play Now
-                                          </span>
-                                            </div>
-                                        </div>
-                                        <div class="block-social-info">
-                                            <ul class="list-inline p-0 m-0 music-play-lists">
-                                                <li><span><i class="ri-volume-mute-fill"></i></span></li>
-                                                <li><span><i class="ri-heart-fill"></i></span></li>
-                                                <li><span><i class="ri-add-line"></i></span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="slide-item">
-                                <a href="show-details.html">
-                                    <div class="block-images position-relative">
-                                        <div class="img-box">
-                                            <img src="index_resource/images/favorite/04.jpg" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="block-description">
-                                            <h6>Dino Land</h6>
-                                            <div class="movie-time d-flex align-items-center my-2">
-                                                <div class="badge badge-secondary p-1 mr-2">18+</div>
-                                                <span class="text-white">3 Seasons</span>
-                                            </div>
-                                            <div class="hover-buttons">
-                                          <span class="btn btn-hover">
-                                          <i class="fa fa-play mr-1" aria-hidden="true"></i>
-                                          Play Now
-                                          </span>
-                                            </div>
-                                        </div>
-                                        <div class="block-social-info">
-                                            <ul class="list-inline p-0 m-0 music-play-lists">
-                                                <li><span><i class="ri-volume-mute-fill"></i></span></li>
-                                                <li><span><i class="ri-heart-fill"></i></span></li>
-                                                <li><span><i class="ri-add-line"></i></span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="slide-item">
-                                <a href="show-details.html">
-                                    <div class="block-images position-relative">
-                                        <div class="img-box">
-                                            <img src="index_resource/images/favorite/05.jpg" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="block-description">
-                                            <h6>Jaction action</h6>
-                                            <div class="movie-time d-flex align-items-center my-2">
-                                                <div class="badge badge-secondary p-1 mr-2">10+</div>
-                                                <span class="text-white">1 Season</span>
-                                            </div>
-                                            <div class="hover-buttons">
-                                          <span class="btn btn-hover">
-                                          <i class="fa fa-play mr-1" aria-hidden="true"></i>
-                                          Play Now
-                                          </span>
-                                            </div>
-                                        </div>
-                                        <div class="block-social-info">
-                                            <ul class="list-inline p-0 m-0 music-play-lists">
-                                                <li><span><i class="ri-volume-mute-fill"></i></span></li>
-                                                <li><span><i class="ri-heart-fill"></i></span></li>
-                                                <li><span><i class="ri-add-line"></i></span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -621,18 +502,15 @@
                     </div>
                     <div class="upcoming-contens">
                         <ul class="favorites-slider list-inline row p-0 mb-0">
+                            @foreach($upcomingMovies as $key => $upcomingMovie)
                             <li class="slide-item">
-                                <a href="movie-details.html">
+                                <a href="{{route('view.detail')}}">
                                     <div class="block-images position-relative">
                                         <div class="img-box">
-                                            <img src="index_resource/images/upcoming/01.jpg" class="img-fluid" alt="">
+                                            <img src="{{$upcomingMovie->getNameImage()}}" class="img-fluid" alt="">
                                         </div>
                                         <div class="block-description">
-                                            <h6>The Last Breath</h6>
-                                            <div class="movie-time d-flex align-items-center my-2">
-                                                <div class="badge badge-secondary p-1 mr-2">5+</div>
-                                                <span class="text-white">2h 30m</span>
-                                            </div>
+                                            <h6>{{$upcomingMovie->title}}</h6>
                                             <div class="hover-buttons">
                                           <span class="btn btn-hover"><i class="fa fa-play mr-1" aria-hidden="true"></i>
                                           Play Now
@@ -640,131 +518,11 @@
                                             </div>
                                         </div>
                                         <div class="block-social-info">
-                                            <ul class="list-inline p-0 m-0 music-play-lists">
-                                                <li><span><i class="ri-volume-mute-fill"></i></span></li>
-                                                <li><span><i class="ri-heart-fill"></i></span></li>
-                                                <li><span><i class="ri-add-line"></i></span></li>
-                                            </ul>
                                         </div>
                                     </div>
                                 </a>
                             </li>
-                            <li class="slide-item">
-                                <a href="movie-details.html">
-                                    <div class="block-images position-relative">
-                                        <div class="img-box">
-                                            <img src="index_resource/images/upcoming/02.jpg" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="block-description">
-                                            <h6>Last Night</h6>
-                                            <div class="movie-time d-flex align-items-center my-2">
-                                                <div class="badge badge-secondary p-1 mr-2">22+</div>
-                                                <span class="text-white">2h 15m</span>
-                                            </div>
-                                            <div class="hover-buttons">
-                                          <span class="btn btn-hover">
-                                          <i class="fa fa-play mr-1" aria-hidden="true"></i>
-                                          Play Now
-                                          </span>
-                                            </div>
-                                        </div>
-                                        <div class="block-social-info">
-                                            <ul class="list-inline p-0 m-0 music-play-lists">
-                                                <li><span><i class="ri-volume-mute-fill"></i></span></li>
-                                                <li><span><i class="ri-heart-fill"></i></span></li>
-                                                <li><span><i class="ri-add-line"></i></span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="slide-item">
-                                <a href="movie-details.html">
-                                    <div class="block-images position-relative">
-                                        <div class="img-box">
-                                            <img src="index_resource/images/upcoming/03.jpg" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="block-description">
-                                            <h6>1980</h6>
-                                            <div class="movie-time d-flex align-items-center my-2">
-                                                <div class="badge badge-secondary p-1 mr-2">25+</div>
-                                                <span class="text-white">3h</span>
-                                            </div>
-                                            <div class="hover-buttons">
-                                          <span class="btn btn-hover">
-                                          <i class="fa fa-play mr-1" aria-hidden="true"></i>
-                                          Play Now
-                                          </span>
-                                            </div>
-                                        </div>
-                                        <div class="block-social-info">
-                                            <ul class="list-inline p-0 m-0 music-play-lists">
-                                                <li><span><i class="ri-volume-mute-fill"></i></span></li>
-                                                <li><span><i class="ri-heart-fill"></i></span></li>
-                                                <li><span><i class="ri-add-line"></i></span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="slide-item">
-                                <a href="movie-details.html">
-                                    <div class="block-images position-relative">
-                                        <div class="img-box">
-                                            <img src="index_resource/images/upcoming/04.jpg" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="block-description">
-                                            <h6>Looters</h6>
-                                            <div class="movie-time d-flex align-items-center my-2">
-                                                <div class="badge badge-secondary p-1 mr-2">11+</div>
-                                                <span class="text-white">2h 45m</span>
-                                            </div>
-                                            <div class="hover-buttons">
-                                          <span class="btn btn-hover">
-                                          <i class="fa fa-play mr-1" aria-hidden="true"></i>
-                                          Play Now
-                                          </span>
-                                            </div>
-                                        </div>
-                                        <div class="block-social-info">
-                                            <ul class="list-inline p-0 m-0 music-play-lists">
-                                                <li><span><i class="ri-volume-mute-fill"></i></span></li>
-                                                <li><span><i class="ri-heart-fill"></i></span></li>
-                                                <li><span><i class="ri-add-line"></i></span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="slide-item">
-                                <a href="movie-details.html">
-                                    <div class="block-images position-relative">
-                                        <div class="img-box">
-                                            <img src="index_resource/images/upcoming/05.jpg" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="block-description">
-                                            <h6>Vugotronic</h6>
-                                            <div class="movie-time d-flex align-items-center my-2">
-                                                <div class="badge badge-secondary p-1 mr-2">9+</div>
-                                                <span class="text-white">2h 30m</span>
-                                            </div>
-                                            <div class="hover-buttons">
-                                          <span class="btn btn-hover">
-                                          <i class="fa fa-play mr-1" aria-hidden="true"></i>
-                                          Play Now
-                                          </span>
-                                            </div>
-                                        </div>
-                                        <div class="block-social-info">
-                                            <ul class="list-inline p-0 m-0 music-play-lists">
-                                                <li><span><i class="ri-volume-mute-fill"></i></span></li>
-                                                <li><span><i class="ri-heart-fill"></i></span></li>
-                                                <li><span><i class="ri-add-line"></i></span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -782,33 +540,8 @@
                         <h4 class="main-title topten-title">Top 10 in India</h4>
                         <ul id="top-ten-slider" class="list-inline p-0 m-0  d-flex align-items-center">
                             <li>
-                                <a href="movie-details.html">
+                                <a href="">
                                     <img src="index_resource/images/top-10/01.jpg" class="img-fluid w-100" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="movie-details.html">
-                                    <img src="index_resource/images/top-10/02.jpg" class="img-fluid w-100" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="movie-details.html">
-                                    <img src="index_resource/images/top-10/03.jpg" class="img-fluid w-100" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="movie-details.html">
-                                    <img src="index_resource/images/top-10/04.jpg" class="img-fluid w-100" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="movie-details.html">
-                                    <img src="index_resource/images/top-10/05.jpg" class="img-fluid w-100" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="movie-details.html">
-                                    <img src="index_resource/images/top-10/06.jpg" class="img-fluid w-100" alt="">
                                 </a>
                             </li>
                         </ul>
@@ -816,7 +549,7 @@
                             <ul id="top-ten-slider-nav" class="list-inline p-0 m-0  d-flex align-items-center">
                                 <li>
                                     <div class="block-images position-relative">
-                                        <a href="movie-details.html">
+                                        <a href="">
                                             <img src="index_resource/images/top-10/01.jpg" class="img-fluid w-100" alt="">
                                         </a>
                                         <div class="block-description">
@@ -826,102 +559,7 @@
                                                 <span class="text-white">3h 15m</span>
                                             </div>
                                             <div class="hover-buttons">
-                                                <a href="movie-details.html" class="btn btn-hover" tabindex="0">
-                                                    <i class="fa fa-play mr-1" aria-hidden="true"></i> Play Now
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="block-images position-relative">
-                                        <a href="movie-details.html">
-                                            <img src="index_resource/images/top-10/02.jpg" class="img-fluid w-100" alt="">
-                                        </a>
-                                        <div class="block-description">
-                                            <h5>Burning</h5>
-                                            <div class="movie-time d-flex align-items-center my-2">
-                                                <div class="badge badge-secondary p-1 mr-2">13+</div>
-                                                <span class="text-white">2h 20m</span>
-                                            </div>
-                                            <div class="hover-buttons">
-                                                <a href="movie-details.html" class="btn btn-hover" tabindex="0">
-                                                    <i class="fa fa-play mr-1" aria-hidden="true"></i> Play Now
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="block-images position-relative">
-                                        <a href="movie-details.html">
-                                            <img src="index_resource/images/top-10/03.jpg" class="img-fluid w-100" alt="">
-                                        </a>
-                                        <div class="block-description">
-                                            <h5>Hubby Kubby</h5>
-                                            <div class="movie-time d-flex align-items-center my-2">
-                                                <div class="badge badge-secondary p-1 mr-2">9+</div>
-                                                <span class="text-white">2h 40m</span>
-                                            </div>
-                                            <div class="hover-buttons">
-                                                <a href="movie-details.html" class="btn btn-hover" tabindex="0">
-                                                    <i class="fa fa-play mr-1" aria-hidden="true"></i> Play Now
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="block-images position-relative">
-                                        <a href="movie-details.html">
-                                            <img src="index_resource/images/top-10/04.jpg" class="img-fluid w-100" alt="">
-                                        </a>
-                                        <div class="block-description">
-                                            <h5>Open Dead Shot</h5>
-                                            <div class="movie-time d-flex align-items-center my-2">
-                                                <div class="badge badge-secondary p-1 mr-2">16+</div>
-                                                <span class="text-white">1h 40m</span>
-                                            </div>
-                                            <div class="hover-buttons">
-                                                <a href="movie-details.html" class="btn btn-hover" tabindex="0">
-                                                    <i class="fa fa-play mr-1" aria-hidden="true"></i> Play Now
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="block-images position-relative">
-                                        <a href="movie-details.html">
-                                            <img src="index_resource/images/top-10/05.jpg" class="img-fluid w-100" alt="">
-                                        </a>
-                                        <div class="block-description">
-                                            <h5>Jumbo Queen</h5>
-                                            <div class="movie-time d-flex align-items-center my-2">
-                                                <div class="badge badge-secondary p-1 mr-2">15+</div>
-                                                <span class="text-white">3h</span>
-                                            </div>
-                                            <div class="hover-buttons">
-                                                <a href="movie-details.html" class="btn btn-hover" tabindex="0">
-                                                    <i class="fa fa-play mr-1" aria-hidden="true"></i> Play Now
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="block-images position-relative">
-                                        <a href="movie-details.html">
-                                            <img src="index_resource/images/top-10/06.jpg" class="img-fluid w-100" alt="">
-                                        </a>
-                                        <div class="block-description">
-                                            <h5>The Lost Journey</h5>
-                                            <div class="movie-time d-flex align-items-center my-2">
-                                                <div class="badge badge-secondary p-1 mr-2">20+</div>
-                                                <span class="text-white">2h 15m</span>
-                                            </div>
-                                            <div class="hover-buttons">
-                                                <a href="movie-details.html" class="btn btn-hover" tabindex="0">
+                                                <a href="" class="btn btn-hover" tabindex="0">
                                                     <i class="fa fa-play mr-1" aria-hidden="true"></i> Play Now
                                                 </a>
                                             </div>
@@ -946,7 +584,7 @@
                     <div class="suggestede-contens">
                         <ul class="list-inline favorites-slider row p-0 mb-0">
                             <li class="slide-item">
-                                <a href="movie-details.html">
+                                <a href="">
                                     <div class="block-images position-relative">
                                         <div class="img-box">
                                             <img src="index_resource/images/suggested/01.jpg" class="img-fluid" alt="">
@@ -956,114 +594,6 @@
                                             <div class="movie-time d-flex align-items-center my-2">
                                                 <div class="badge badge-secondary p-1 mr-2">11+</div>
                                                 <span class="text-white">2h 30m</span>
-                                            </div>
-                                            <div class="hover-buttons">
-                                          <span class="btn btn-hover"><i class="fa fa-play mr-1" aria-hidden="true"></i>
-                                          Play Now</span>
-                                            </div>
-                                        </div>
-                                        <div class="block-social-info">
-                                            <ul class="list-inline p-0 m-0 music-play-lists">
-                                                <li><span><i class="ri-volume-mute-fill"></i></span></li>
-                                                <li><span><i class="ri-heart-fill"></i></span></li>
-                                                <li><span><i class="ri-add-line"></i></span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="slide-item">
-                                <a href="show-details.html">
-                                    <div class="block-images position-relative">
-                                        <div class="img-box">
-                                            <img src="index_resource/images/suggested/02.jpg" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="block-description">
-                                            <h6>Mission Moon</h6>
-                                            <div class="movie-time d-flex align-items-center my-2">
-                                                <div class="badge badge-secondary p-1 mr-2">9+</div>
-                                                <span class="text-white">2 Seasons</span>
-                                            </div>
-                                            <div class="hover-buttons">
-                                          <span class="btn btn-hover"><i class="fa fa-play mr-1" aria-hidden="true"></i>
-                                          Play Now</span>
-                                            </div>
-                                        </div>
-                                        <div class="block-social-info">
-                                            <ul class="list-inline p-0 m-0 music-play-lists">
-                                                <li><span><i class="ri-volume-mute-fill"></i></span></li>
-                                                <li><span><i class="ri-heart-fill"></i></span></li>
-                                                <li><span><i class="ri-add-line"></i></span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="slide-item">
-                                <a href="movie-details.html">
-                                    <div class="block-images position-relative">
-                                        <div class="img-box">
-                                            <img src="index_resource/images/suggested/03.jpg" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="block-description">
-                                            <h6>Unknown Land</h6>
-                                            <div class="movie-time d-flex align-items-center my-2">
-                                                <div class="badge badge-secondary p-1 mr-2">17+</div>
-                                                <span class="text-white">2h 30m</span>
-                                            </div>
-                                            <div class="hover-buttons">
-                                          <span class="btn btn-hover"><i class="fa fa-play mr-1" aria-hidden="true"></i>
-                                          Play Now</span>
-                                            </div>
-                                        </div>
-                                        <div class="block-social-info">
-                                            <ul class="list-inline p-0 m-0 music-play-lists">
-                                                <li><span><i class="ri-volume-mute-fill"></i></span></li>
-                                                <li><span><i class="ri-heart-fill"></i></span></li>
-                                                <li><span><i class="ri-add-line"></i></span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="slide-item">
-                                <a href="show-details.html">
-                                    <div class="block-images position-relative">
-                                        <div class="img-box">
-                                            <img src="index_resource/images/suggested/04.jpg" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="block-description">
-                                            <h6>Friends</h6>
-                                            <div class="movie-time d-flex align-items-center my-2">
-                                                <div class="badge badge-secondary p-1 mr-2">19+</div>
-                                                <span class="text-white">3 Seasons</span>
-                                            </div>
-                                            <div class="hover-buttons">
-                                          <span class="btn btn-hover"><i class="fa fa-play mr-1" aria-hidden="true"></i>
-                                          Play Now</span>
-                                            </div>
-                                        </div>
-                                        <div class="block-social-info">
-                                            <ul class="list-inline p-0 m-0 music-play-lists">
-                                                <li><span><i class="ri-volume-mute-fill"></i></span></li>
-                                                <li><span><i class="ri-heart-fill"></i></span></li>
-                                                <li><span><i class="ri-add-line"></i></span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="slide-item">
-                                <a href="movie-details.html">
-                                    <div class="block-images position-relative">
-                                        <div class="img-box">
-                                            <img src="index_resource/images/suggested/05.jpg" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="block-description">
-                                            <h6>Inside the Sea</h6>
-                                            <div class="movie-time d-flex align-items-center my-2">
-                                                <div class="badge badge-secondary p-1 mr-2">13+</div>
-                                                <span class="text-white">2h 40m</span>
                                             </div>
                                             <div class="hover-buttons">
                                           <span class="btn btn-hover"><i class="fa fa-play mr-1" aria-hidden="true"></i>
@@ -1116,14 +646,14 @@
                         </div>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
                         <div class="parallax-buttons">
-                            <a href="movie-details.html" class="btn btn-hover">Play Now</a>
-                            <a href="movie-details.html" class="btn btn-link">More details</a>
+                            <a href="" class="btn btn-hover">Play Now</a>
+                            <a href="" class="btn btn-link">More details</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-8">
                     <div class="parallax-img">
-                        <a href="movie-details.html">
+                        <a href="">
                             <img src="index_resource/images/parallax/p1.jpg" class="img-fluid w-100" alt="bailey">
                         </a>
                     </div>
@@ -1236,7 +766,7 @@
                                                     </p>
                                                     <div class="p-btns">
                                                         <div class="d-flex align-items-center p-0">
-                                                            <a href="show-details.html" class="btn btn-hover mr-2" tabindex="0"><i
+                                                            <a href="" class="btn btn-hover mr-2" tabindex="0"><i
                                                                     class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
                                                             <a href="javascript:void(0);" class="btn btn-link" tabindex="0"><i class="ri-add-line"></i>My
                                                                 List</a>
@@ -1258,7 +788,7 @@
                                             <div id="trending-data2" class="overlay-tab tab-pane fade">
                                                 <div
                                                     class="trending-info align-items-center w-100 animated fadeInUp">
-                                                    <a href="show-details.html" tabindex="0">
+                                                    <a href="" tabindex="0">
                                                         <div class="channel-logo">
                                                             <img src="index_resource/images/logo.png" class="c-logo" alt="stramit">
                                                         </div>
@@ -1275,20 +805,20 @@
                                                         <div class="owl-carousel owl-theme episodes-slider1 list-inline p-0 mb-0">
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/01.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">1</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 1</a>
+                                                                        <a href="">Episode 1</a>
                                                                         <span class="text-primary">2.25 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1297,20 +827,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/02.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">2</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 2</a>
+                                                                        <a href="">Episode 2</a>
                                                                         <span class="text-primary">3.23 m</span>
                                                                     </div>
                                                                     <p class="mb-0">
@@ -1320,20 +850,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/03.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">3</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 3</a>
+                                                                        <a href="">Episode 3</a>
                                                                         <span class="text-primary">2 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1342,20 +872,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/04.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">4</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 4</a>
+                                                                        <a href="">Episode 4</a>
                                                                         <span class="text-primary">1.12 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1364,20 +894,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/05.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">5</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 5</a>
+                                                                        <a href="">Episode 5</a>
                                                                         <span class="text-primary">2.54 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1526,20 +1056,20 @@
                                                         <div class="owl-carousel owl-theme episodes-slider1 list-inline p-0 mb-0">
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/01.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">1</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 1</a>
+                                                                        <a href="">Episode 1</a>
                                                                         <span class="text-primary">2.25 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1548,20 +1078,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/02.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">2</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 2</a>
+                                                                        <a href="">Episode 2</a>
                                                                         <span class="text-primary">3.23 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1570,20 +1100,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/03.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">3</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 3</a>
+                                                                        <a href="">Episode 3</a>
                                                                         <span class="text-primary">2 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1592,20 +1122,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/04.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">4</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 4</a>
+                                                                        <a href="">Episode 4</a>
                                                                         <span class="text-primary">1.12 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1614,20 +1144,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/05.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">5</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 5</a>
+                                                                        <a href="">Episode 5</a>
                                                                         <span class="text-primary">2.54 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1695,7 +1225,7 @@
                                                     </p>
                                                     <div class="p-btns">
                                                         <div class="d-flex align-items-center p-0">
-                                                            <a href="show-details.html" class="btn btn-hover mr-2" tabindex="0"><i
+                                                            <a href="" class="btn btn-hover mr-2" tabindex="0"><i
                                                                     class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
                                                             <a href="javascript:void(0);" class="btn btn-link" tabindex="0"><i class="ri-add-line"></i>My
                                                                 List</a>
@@ -1717,7 +1247,7 @@
                                             <div id="trending-data6" class="overlay-tab tab-pane fade">
                                                 <div
                                                     class="trending-info align-items-center w-100 animated fadeInUp">
-                                                    <a href="show-details.html" tabindex="0">
+                                                    <a href="" tabindex="0">
                                                         <div class="channel-logo">
                                                             <img src="index_resource/images/logo.png" class="c-logo" alt="stramit">
                                                         </div>
@@ -1733,20 +1263,20 @@
                                                         <div class="owl-carousel owl-theme episodes-slider1 list-inline p-0 mb-0">
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/01.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">1</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 1</a>
+                                                                        <a href="">Episode 1</a>
                                                                         <span class="text-primary">2.25 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1755,20 +1285,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/02.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">2</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 2</a>
+                                                                        <a href="">Episode 2</a>
                                                                         <span class="text-primary">3.23 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1777,20 +1307,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/03.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">3</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 3</a>
+                                                                        <a href="">Episode 3</a>
                                                                         <span class="text-primary">2 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1799,20 +1329,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/04.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">4</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 4</a>
+                                                                        <a href="">Episode 4</a>
                                                                         <span class="text-primary">1.12 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1821,20 +1351,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/05.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">5</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 5</a>
+                                                                        <a href="">Episode 5</a>
                                                                         <span class="text-primary">2.54 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1983,20 +1513,20 @@
                                                         <div class="owl-carousel owl-theme episodes-slider1 list-inline p-0 mb-0">
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/01.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">1</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 1</a>
+                                                                        <a href="">Episode 1</a>
                                                                         <span class="text-primary">2.25 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2005,20 +1535,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/02.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">2</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 2</a>
+                                                                        <a href="">Episode 2</a>
                                                                         <span class="text-primary">3.23 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2027,20 +1557,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/03.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">3</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 3</a>
+                                                                        <a href="">Episode 3</a>
                                                                         <span class="text-primary">2 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2049,20 +1579,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/04.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">4</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 4</a>
+                                                                        <a href="">Episode 4</a>
                                                                         <span class="text-primary">1.12 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2071,20 +1601,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/05.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">5</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 5</a>
+                                                                        <a href="">Episode 5</a>
                                                                         <span class="text-primary">2.54 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2152,7 +1682,7 @@
                                                     </p>
                                                     <div class="p-btns">
                                                         <div class="d-flex align-items-center p-0">
-                                                            <a href="show-details.html" class="btn btn-hover mr-2" tabindex="0"><i
+                                                            <a href="" class="btn btn-hover mr-2" tabindex="0"><i
                                                                     class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
                                                             <a href="javascript:void(0);" class="btn btn-link" tabindex="0"><i class="ri-add-line"></i>My
                                                                 List</a>
@@ -2174,7 +1704,7 @@
                                             <div id="trending-data10" class="overlay-tab tab-pane fade">
                                                 <div
                                                     class="trending-info align-items-center w-100 animated fadeInUp">
-                                                    <a href="show-details.html" tabindex="0">
+                                                    <a href="" tabindex="0">
                                                         <div class="channel-logo">
                                                             <img src="index_resource/images/logo.png" class="c-logo" alt="stramit">
                                                         </div>
@@ -2191,20 +1721,20 @@
                                                         <div class="owl-carousel owl-theme episodes-slider1 list-inline p-0 mb-0">
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/01.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">1</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 1</a>
+                                                                        <a href="">Episode 1</a>
                                                                         <span class="text-primary">2.25 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2213,20 +1743,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/02.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">2</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 2</a>
+                                                                        <a href="">Episode 2</a>
                                                                         <span class="text-primary">3.23 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2235,20 +1765,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/03.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">3</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 3</a>
+                                                                        <a href="">Episode 3</a>
                                                                         <span class="text-primary">2 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2257,20 +1787,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/04.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">4</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 4</a>
+                                                                        <a href="">Episode 4</a>
                                                                         <span class="text-primary">1.12 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2279,20 +1809,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/05.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">5</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 5</a>
+                                                                        <a href="">Episode 5</a>
                                                                         <span class="text-primary">2.54 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2441,20 +1971,20 @@
                                                         <div class="owl-carousel owl-theme episodes-slider1 list-inline p-0 mb-0">
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/01.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">1</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 1</a>
+                                                                        <a href="">Episode 1</a>
                                                                         <span class="text-primary">2.25 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2463,20 +1993,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/02.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">2</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 2</a>
+                                                                        <a href="">Episode 2</a>
                                                                         <span class="text-primary">3.23 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2485,20 +2015,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/03.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">3</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 3</a>
+                                                                        <a href="">Episode 3</a>
                                                                         <span class="text-primary">2 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2507,20 +2037,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/04.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">4</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 4</a>
+                                                                        <a href="">Episode 4</a>
                                                                         <span class="text-primary">1.12 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2529,20 +2059,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/05.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">5</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 5</a>
+                                                                        <a href="">Episode 5</a>
                                                                         <span class="text-primary">2.54 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2610,7 +2140,7 @@
                                                     </p>
                                                     <div class="p-btns">
                                                         <div class="d-flex align-items-center p-0">
-                                                            <a href="show-details.html" class="btn btn-hover mr-2" tabindex="0"><i
+                                                            <a href="" class="btn btn-hover mr-2" tabindex="0"><i
                                                                     class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
                                                             <a href="javascript:void(0);" class="btn btn-link" tabindex="0"><i class="ri-add-line"></i>My
                                                                 List</a>
@@ -2632,7 +2162,7 @@
                                             <div id="trending-data14" class="overlay-tab tab-pane fade">
                                                 <div
                                                     class="trending-info align-items-center w-100 animated fadeInUp">
-                                                    <a href="show-details.html" tabindex="0">
+                                                    <a href="" tabindex="0">
                                                         <div class="channel-logo">
                                                             <img src="index_resource/images/logo.png" class="c-logo" alt="stramit">
                                                         </div>
@@ -2648,20 +2178,20 @@
                                                         <div class="owl-carousel owl-theme episodes-slider1 list-inline p-0 mb-0">
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/01.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">1</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 1</a>
+                                                                        <a href="">Episode 1</a>
                                                                         <span class="text-primary">2.25 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2670,20 +2200,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/02.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">2</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 2</a>
+                                                                        <a href="">Episode 2</a>
                                                                         <span class="text-primary">3.23 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2692,20 +2222,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/03.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">3</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 3</a>
+                                                                        <a href="">Episode 3</a>
                                                                         <span class="text-primary">2 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2714,20 +2244,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/04.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">4</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 4</a>
+                                                                        <a href="">Episode 4</a>
                                                                         <span class="text-primary">1.12 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2736,20 +2266,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/05.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">5</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 5</a>
+                                                                        <a href="">Episode 5</a>
                                                                         <span class="text-primary">2.54 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2898,20 +2428,20 @@
                                                         <div class="owl-carousel owl-theme episodes-slider1 list-inline p-0 mb-0">
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/01.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">1</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 1</a>
+                                                                        <a href="">Episode 1</a>
                                                                         <span class="text-primary">2.25 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2920,20 +2450,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/02.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">2</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 2</a>
+                                                                        <a href="">Episode 2</a>
                                                                         <span class="text-primary">3.23 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2942,20 +2472,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/03.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">3</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 3</a>
+                                                                        <a href="">Episode 3</a>
                                                                         <span class="text-primary">2 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2964,20 +2494,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/04.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">4</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 4</a>
+                                                                        <a href="">Episode 4</a>
                                                                         <span class="text-primary">1.12 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2986,20 +2516,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/05.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">5</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 5</a>
+                                                                        <a href="">Episode 5</a>
                                                                         <span class="text-primary">2.54 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3067,7 +2597,7 @@
                                                     </p>
                                                     <div class="p-btns">
                                                         <div class="d-flex align-items-center p-0">
-                                                            <a href="show-details.html" class="btn btn-hover mr-2" tabindex="0"><i
+                                                            <a href="" class="btn btn-hover mr-2" tabindex="0"><i
                                                                     class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
                                                             <a href="javascript:void(0);" class="btn btn-link" tabindex="0"><i class="ri-add-line"></i>My
                                                                 List</a>
@@ -3089,7 +2619,7 @@
                                             <div id="trending-data18" class="overlay-tab tab-pane fade">
                                                 <div
                                                     class="trending-info align-items-center w-100 animated fadeInUp">
-                                                    <a href="show-details.html" tabindex="0">
+                                                    <a href="" tabindex="0">
                                                         <div class="channel-logo">
                                                             <img src="index_resource/images/logo.png" class="c-logo" alt="stramit">
                                                         </div>
@@ -3105,20 +2635,20 @@
                                                         <div class="owl-carousel owl-theme episodes-slider1 list-inline p-0 mb-0">
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/01.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">1</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 1</a>
+                                                                        <a href="">Episode 1</a>
                                                                         <span class="text-primary">2.25 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3127,20 +2657,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/02.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">2</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 2</a>
+                                                                        <a href="">Episode 2</a>
                                                                         <span class="text-primary">3.23 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3149,20 +2679,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/03.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">3</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 3</a>
+                                                                        <a href="">Episode 3</a>
                                                                         <span class="text-primary">2 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3171,20 +2701,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/04.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">4</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 4</a>
+                                                                        <a href="">Episode 4</a>
                                                                         <span class="text-primary">1.12 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3193,20 +2723,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/05.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">5</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 5</a>
+                                                                        <a href="">Episode 5</a>
                                                                         <span class="text-primary">2.54 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3355,20 +2885,20 @@
                                                         <div class="owl-carousel owl-theme episodes-slider1 list-inline p-0 mb-0">
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/01.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">1</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 1</a>
+                                                                        <a href="">Episode 1</a>
                                                                         <span class="text-primary">2.25 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3377,20 +2907,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/02.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">2</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 2</a>
+                                                                        <a href="">Episode 2</a>
                                                                         <span class="text-primary">3.23 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3399,20 +2929,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/03.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">3</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 3</a>
+                                                                        <a href="">Episode 3</a>
                                                                         <span class="text-primary">2 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3421,20 +2951,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/04.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">4</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 4</a>
+                                                                        <a href="">Episode 4</a>
                                                                         <span class="text-primary">1.12 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3443,20 +2973,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/05.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">5</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 5</a>
+                                                                        <a href="">Episode 5</a>
                                                                         <span class="text-primary">2.54 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3524,7 +3054,7 @@
                                                     </p>
                                                     <div class="p-btns">
                                                         <div class="d-flex align-items-center p-0">
-                                                            <a href="show-details.html" class="btn btn-hover mr-2" tabindex="0"><i
+                                                            <a href="" class="btn btn-hover mr-2" tabindex="0"><i
                                                                     class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
                                                             <a href="javascript:void(0);" class="btn btn-link" tabindex="0"><i class="ri-add-line"></i>My
                                                                 List</a>
@@ -3546,7 +3076,7 @@
                                             <div id="trending-data22" class="overlay-tab tab-pane fade">
                                                 <div
                                                     class="trending-info align-items-center w-100 animated fadeInUp">
-                                                    <a href="show-details.html" tabindex="0">
+                                                    <a href="" tabindex="0">
                                                         <div class="channel-logo">
                                                             <img src="index_resource/images/logo.png" class="c-logo" alt="stramit">
                                                         </div>
@@ -3562,20 +3092,20 @@
                                                         <div class="owl-carousel owl-theme episodes-slider1 list-inline p-0 mb-0">
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/01.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">1</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 1</a>
+                                                                        <a href="">Episode 1</a>
                                                                         <span class="text-primary">2.25 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3584,20 +3114,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/02.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">2</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 2</a>
+                                                                        <a href="">Episode 2</a>
                                                                         <span class="text-primary">3.23 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3606,20 +3136,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/03.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">3</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 3</a>
+                                                                        <a href="">Episode 3</a>
                                                                         <span class="text-primary">2 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3628,20 +3158,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/04.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">4</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 4</a>
+                                                                        <a href="">Episode 4</a>
                                                                         <span class="text-primary">1.12 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3650,20 +3180,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/05.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">5</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 5</a>
+                                                                        <a href="">Episode 5</a>
                                                                         <span class="text-primary">2.54 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3812,20 +3342,20 @@
                                                         <div class="owl-carousel owl-theme episodes-slider1 list-inline p-0 mb-0">
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/01.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">1</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 1</a>
+                                                                        <a href="">Episode 1</a>
                                                                         <span class="text-primary">2.25 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3834,20 +3364,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/02.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">2</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 2</a>
+                                                                        <a href="">Episode 2</a>
                                                                         <span class="text-primary">3.23 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3856,20 +3386,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/03.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">3</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 3</a>
+                                                                        <a href="">Episode 3</a>
                                                                         <span class="text-primary">2 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3878,20 +3408,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/04.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">4</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 4</a>
+                                                                        <a href="">Episode 4</a>
                                                                         <span class="text-primary">1.12 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3900,20 +3430,20 @@
                                                             </div>
                                                             <div class="e-item">
                                                                 <div class="block-image position-relative">
-                                                                    <a href="show-details.html">
+                                                                    <a href="">
                                                                         <img src="index_resource/images/episodes/05.jpg" class="img-fluid" alt="">
                                                                     </a>
                                                                     <div class="episode-number">5</div>
                                                                     <div class="episode-play-info">
                                                                         <div class="episode-play">
-                                                                            <a href="show-details.html" tabindex="0"><i
+                                                                            <a href="" tabindex="0"><i
                                                                                     class="ri-play-fill"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="episodes-description text-body mt-2">
                                                                     <div class="d-flex align-items-center justify-content-between">
-                                                                        <a href="show-details.html">Episode 5</a>
+                                                                        <a href="">Episode 5</a>
                                                                         <span class="text-primary">2.54 m</span>
                                                                     </div>
                                                                     <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3933,6 +3463,7 @@
                 </div>
             </div>
         </div>
+
     </section>
     <section id="iq-tvthrillers" class="s-margin">
         <div class="container-fluid">
@@ -3945,7 +3476,7 @@
                     <div class="tvthrillers-contens">
                         <ul class="favorites-slider list-inline row p-0 mb-0">
                             <li class="slide-item">
-                                <a href="show-details.html">
+                                <a href="">
                                     <div class="block-images position-relative">
                                         <div class="img-box">
                                             <img src="index_resource/images/tvthrillers/01.jpg" class="img-fluid" alt="">
@@ -3971,121 +3502,16 @@
                                     </div>
                                 </a>
                             </li>
-                            <li class="slide-item">
-                                <a href="show-details.html">
-                                    <div class="block-images position-relative">
-                                        <div class="img-box">
-                                            <img src="index_resource/images/tvthrillers/02.jpg" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="block-description">
-                                            <h6>My True Friends</h6>
-                                            <div class="movie-time d-flex align-items-center my-2">
-                                                <div class="badge badge-secondary p-1 mr-2">7+</div>
-                                                <span class="text-white">2 Seasons</span>
-                                            </div>
-                                            <div class="hover-buttons">
-                                          <span class="btn btn-hover"><i class="fa fa-play mr-1" aria-hidden="true"></i>
-                                          Play Now</span>
-                                            </div>
-                                        </div>
-                                        <div class="block-social-info">
-                                            <ul class="list-inline p-0 m-0 music-play-lists">
-                                                <li><span><i class="ri-volume-mute-fill"></i></span></li>
-                                                <li><span><i class="ri-heart-fill"></i></span></li>
-                                                <li><span><i class="ri-add-line"></i></span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="slide-item">
-                                <a href="show-details.html">
-                                    <div class="block-images position-relative">
-                                        <div class="img-box">
-                                            <img src="index_resource/images/tvthrillers/03.jpg" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="block-description">
-                                            <h6>Arrival 1999</h6>
-                                            <div class="movie-time d-flex align-items-center my-2">
-                                                <div class="badge badge-secondary p-1 mr-2">11+</div>
-                                                <span class="text-white">3 Seasons</span>
-                                            </div>
-                                            <div class="hover-buttons">
-                                          <span class="btn btn-hover"><i class="fa fa-play mr-1" aria-hidden="true"></i>
-                                          Play Now</span>
-                                            </div>
-                                        </div>
-                                        <div class="block-social-info">
-                                            <ul class="list-inline p-0 m-0 music-play-lists">
-                                                <li><span><i class="ri-volume-mute-fill"></i></span></li>
-                                                <li><span><i class="ri-heart-fill"></i></span></li>
-                                                <li><span><i class="ri-add-line"></i></span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="slide-item">
-                                <a href="show-details.html">
-                                    <div class="block-images position-relative">
-                                        <div class="img-box">
-                                            <img src="index_resource/images/tvthrillers/04.jpg" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="block-description">
-                                            <h6>Night Mare</h6>
-                                            <div class="movie-time d-flex align-items-center my-2">
-                                                <div class="badge badge-secondary p-1 mr-2">18+</div>
-                                                <span class="text-white">3 Seasons</span>
-                                            </div>
-                                            <div class="hover-buttons">
-                                          <span class="btn btn-hover"><i class="fa fa-play mr-1" aria-hidden="true"></i>
-                                          Play Now</span>
-                                            </div>
-                                        </div>
-                                        <div class="block-social-info">
-                                            <ul class="list-inline p-0 m-0 music-play-lists">
-                                                <li><span><i class="ri-volume-mute-fill"></i></span></li>
-                                                <li><span><i class="ri-heart-fill"></i></span></li>
-                                                <li><span><i class="ri-add-line"></i></span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="slide-item">
-                                <a href="show-details.html">
-                                    <div class="block-images position-relative">
-                                        <div class="img-box">
-                                            <img src="index_resource/images/tvthrillers/05.jpg" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="block-description">
-                                            <h6>The Marshal King</h6>
-                                            <div class="movie-time d-flex align-items-center my-2">
-                                                <div class="badge badge-secondary p-1 mr-2">17+</div>
-                                                <span class="text-white">1 Season</span>
-                                            </div>
-                                            <div class="hover-buttons">
-                                          <span class="btn btn-hover"><i class="fa fa-play mr-1" aria-hidden="true"></i>
-                                          Play Now</span>
-                                            </div>
-                                        </div>
-                                        <div class="block-social-info">
-                                            <ul class="list-inline p-0 m-0 music-play-lists">
-                                                <li><span><i class="ri-volume-mute-fill"></i></span></li>
-                                                <li><span><i class="ri-heart-fill"></i></span></li>
-                                                <li><span><i class="ri-add-line"></i></span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
+
     </section>
 </div>
+
+
 <footer class="mb-0">
     <div class="container-fluid">
         <div class="block-space">

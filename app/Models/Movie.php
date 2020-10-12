@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Movie extends Model
 {
@@ -33,5 +34,13 @@ class Movie extends Model
     }
     function movieStatus(){
         return $this->belongsTo(MovieStatus::class, 'movie_status_id');
+    }
+
+    function getNameImage(){
+        return '/storage/images/' .ltrim($this->image, '/public/images/');
+    }
+
+    function getNameVideo(){
+        return '/storage/videos/' .ltrim($this->video, '/public/videos/');
     }
 }

@@ -19,6 +19,7 @@
                                 <table class="data-tables table movie_table " style="width:100%" >
                                     <thead>
                                     <tr>
+                                        <th>#</th>
                                         <th>Movie</th>
                                         <th>Quality</th>
                                         <th>Category</th>
@@ -30,9 +31,9 @@
                                     </thead>
                                     <tbody>
                                     @forelse($movies as $key => $movie)
-
                                     <tr>
-                                        <td>
+                                        <td>{{++$key}}</td>
+                                        <td style="width: 350px">
                                             <div class="media align-items-center">
                                                 <div class="iq-movie">
                                                     <a href="javascript:void(0);"><img

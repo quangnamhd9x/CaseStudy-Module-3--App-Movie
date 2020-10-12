@@ -5,7 +5,12 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [IndexController::class, 'showIndex'])->name('view.index');
+//Route::get('/', [IndexController::class, 'showIndex'])->name('view.index');
+Route::prefix('/')->group(function (){
+    Route::get('/', [IndexController::class, 'showIndex'])->name('view.index');
+    Route::get('/detail', [IndexController::class, 'showDetail'])->name('view.detail');
+//    Route::post('/movie/{id}/detail', [IndexController::class, 'detail'])->name('view.detail');
+});
 
 Route::get('/login', [LoginController::class, 'showLogin'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('auth.login');
