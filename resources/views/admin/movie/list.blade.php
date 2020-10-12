@@ -24,7 +24,7 @@
                                         <th>Category</th>
                                         <th>Release Year</th>
                                         <th>Language</th>
-                                        <th style="width: 20%;">Description</th>
+                                        <th>Description</th>
                                         <th>Action</th>
                                     </tr>
                                     </thead>
@@ -48,10 +48,10 @@
                                         <td>{{$movie->category->name}}</td>
                                         <td>{{$movie->release_year}}</td>
                                         <td>{{$movie->language->name}}</td>
-                                        <td>{{$movie->description}}</td>
+                                        <td>...</td>
                                         <td>
                                             <div>
-                                                <a class="iq-bg-warning" data-placement="top" href="{{route('admin.dashboard')}}">View</a>
+                                                <a class="iq-bg-warning" data-placement="top" href="{{route('movie.showDetail', $movie->id)}}">View Detail</a>
                                                 <a class="iq-bg-success" data-placement="top" href="{{route('movie.edit', $movie->id)}}">Edit</a>
                                                 <a class="iq-bg-primary" onclick="return confirm('Are you sure?')" data-placement="top" href="{{route('movie.destroy', $movie->id)}}">Delete</a>
                                             </div>

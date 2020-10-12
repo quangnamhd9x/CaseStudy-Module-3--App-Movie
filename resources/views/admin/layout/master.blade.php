@@ -3,6 +3,12 @@
 
 <!-- Mirrored from iqonic.design/themes/streamitnew/dashboard/html/theme/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Sep 2020 07:03:49 GMT -->
 <head>
+    <style>
+        .body {
+            background-color: white;
+        }
+
+    </style>
     <base href="{{asset('/')}}">
     <!-- Required meta tags -->
     <meta charset="utf-8">

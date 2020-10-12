@@ -22,5 +22,6 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
         Route::get('/{id}/edit', [\App\Http\Controllers\MovieController::class, 'edit'])->name('movie.edit');
         Route::post('/{id}/edit', [\App\Http\Controllers\MovieController::class, 'update'])->name('movie.update');
         Route::get('/{id}/destroy', [\App\Http\Controllers\MovieController::class, 'destroy'])->name('movie.destroy');
+        Route::get('/{id}/detail', [\App\Http\Controllers\MovieController::class, 'showDetail'])->name('movie.showDetail');
     });
 });
