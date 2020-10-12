@@ -19,6 +19,8 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
         Route::get('/add', [\App\Http\Controllers\MovieController::class, 'create'])->name('movie.create');
         Route::post('/add', [\App\Http\Controllers\MovieController::class, 'store'])->name('movie.store');
         Route::get('/', [\App\Http\Controllers\MovieController::class, 'showList'])->name('movie.list');
-
+        Route::get('/{id}/edit', [\App\Http\Controllers\MovieController::class, 'edit'])->name('movie.edit');
+        Route::post('/{id}/edit', [\App\Http\Controllers\MovieController::class, 'update'])->name('movie.update');
+        Route::get('/{id}/destroy', [\App\Http\Controllers\MovieController::class, 'destroy'])->name('movie.destroy');
     });
 });

@@ -19,13 +19,18 @@ class Movie extends Model
         'quality_id',
         'language_id',
     ];
+
+
     function language(){
         return $this->belongsTo(Language::class, 'language_id');
     }
     function quality(){
-        return $this->belongsTo(Language::class, 'quality_id');
+        return $this->belongsTo(Quality::class, 'quality_id');
     }
     function category(){
-        return $this->belongsTo(Language::class, 'category_id');
+        return $this->belongsTo(Category::class, 'category_id');
+    }
+    function getLanguageById(){
+        return Language::all();
     }
 }
