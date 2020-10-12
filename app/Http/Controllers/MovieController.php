@@ -35,7 +35,6 @@ class MovieController extends Controller
             $pathVideo = $request->file('video')->store('public/videos');
             $movie->video = $pathVideo;
         }
-
         $movie->save();
         return redirect()->route('movie.list');
     }
@@ -45,6 +44,14 @@ class MovieController extends Controller
         $categories = Category::all();
         $languages = Language::all();
         return view('admin.movie.list', compact('movies', 'categories', 'languages'));
+    }
+
+    public function showDetail($id){
+        $movie = Movie::findOrFail($id);
+        $categories = Category::all();
+        $languages = Language::all();
+        $qualities = Quality::all();
+        return view('admin.movie.detail', compact('movie', 'categories', 'languages', 'qualities'));
     }
 
     public function edit($id){

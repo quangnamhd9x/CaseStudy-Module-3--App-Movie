@@ -18,7 +18,7 @@ class CreateMoviesTable extends Migration
             $table->string('title');
             $table->string('image')->nullable();
             $table->string('video')->nullable();
-            $table->string('description');
+            $table->longText('description');
             $table->integer('release_year');
             $table->timestamps();
         });

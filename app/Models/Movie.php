@@ -18,6 +18,7 @@ class Movie extends Model
         'category_id',
         'quality_id',
         'language_id',
+        'status',
     ];
 
 
@@ -30,7 +31,7 @@ class Movie extends Model
     function category(){
         return $this->belongsTo(Category::class, 'category_id');
     }
-    function getLanguageById(){
-        return Language::all();
+    function movieStatus(){
+        return $this->belongsTo(MovieStatus::class, 'movie_status_id');
     }
 }
