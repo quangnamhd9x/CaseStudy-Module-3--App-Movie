@@ -8,6 +8,7 @@ use App\Models\Language;
 use App\Models\Movie;
 use App\Models\Quality;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class MovieController extends Controller
@@ -41,6 +42,29 @@ class MovieController extends Controller
 
     public function showList(){
         $movies = Movie::all();
-        return view('admin.movie.list', compact('movies'));
+        $categories = Category::all();
+        $languages = Language::all();
+        return view('admin.movie.list', compact('movies', 'categories', 'languages'));
+    }
+
+    public function edit($id){
+        $movie = Movie::findOrFail($id);
+        $categories = Category::all();
+        $languages = Language::all();
+        $qualities = Quality::all();
+        return view('admin.movie.edit', compact('movie', 'categories', 'languages', 'qualities'));
+    }
+
+    public function update(Request $request, $id){
+        $movie = Movie::findOrFail($id);
+        $movie->fill($request->all());
+        $movie->save();
+        return redirect()->route('movie.list');
+    }
+
+    public function destroy($id){
+        $movie = Movie::findOrFail($id);
+        $movie->delete();
+        return redirect()->route('movie.list');
     }
 }

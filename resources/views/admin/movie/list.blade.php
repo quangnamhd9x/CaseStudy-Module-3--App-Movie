@@ -16,7 +16,7 @@
                         </div>
                         <div class="iq-card-body">
                             <div class="table-view">
-                                <table class="data-tables table movie_table " style="width:100%">
+                                <table class="data-tables table movie_table " style="width:100%" >
                                     <thead>
                                     <tr>
                                         <th>Movie</th>
@@ -36,24 +36,24 @@
                                             <div class="media align-items-center">
                                                 <div class="iq-movie">
                                                     <a href="javascript:void(0);"><img
-                                                            src=""
-                                                            class="img-border-radius avatar-40 img-fluid" alt=""></a>
+                                                            src="{{'/storage/images/' .ltrim($movie->image, '/public/images/')}}"
+                                                            class="img-border-radius avatar-40 img-fluid"></a>
                                                 </div>
                                                 <div class="media-body text-white text-left ml-3">
                                                     <p class="mb-0">{{$movie->title}}</p>
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>{{$movie->quality_id}}</td>
-                                        <td>{{$movie->category_id}}</td>
+                                        <td>{{$movie->quality->name}}</td>
+                                        <td>{{$movie->category->name}}</td>
                                         <td>{{$movie->release_year}}</td>
-                                        <td>{{$movie->language_id}}</td>
+                                        <td>{{$movie->language->name}}</td>
                                         <td>{{$movie->description}}</td>
                                         <td>
                                             <div>
-                                                <a class="iq-bg-warning" data-placement="top" href="#">View</a>
-                                                <a class="iq-bg-success" data-placement="top" href="#">Edit</a>
-                                                <a class="iq-bg-primary" onclick="return confirm('Are you sure?')" data-placement="top" href="#">Delete</a>
+                                                <a class="iq-bg-warning" data-placement="top" href="{{route('admin.dashboard')}}">View</a>
+                                                <a class="iq-bg-success" data-placement="top" href="{{route('movie.edit', $movie->id)}}">Edit</a>
+                                                <a class="iq-bg-primary" onclick="return confirm('Are you sure?')" data-placement="top" href="{{route('movie.destroy', $movie->id)}}">Delete</a>
                                             </div>
                                         </td>
                                     </tr>

@@ -6,13 +6,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf2b9a90-5c05-476a-862c-0f3ee74efcbf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/movie/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CreateMovie.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CreateMovie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Movie.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Movie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Quality.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Quality.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/movie/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/movie/add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/movie/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/movie/list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -194,7 +191,9 @@
       <workItem from="1602204972118" duration="20058000" />
       <workItem from="1602248300458" duration="599000" />
       <workItem from="1602249261974" duration="6013000" />
-      <workItem from="1602292933681" duration="8916000" />
+      <workItem from="1602292933681" duration="9467000" />
+      <workItem from="1602313300935" duration="6316000" />
+      <workItem from="1602464018230" duration="10413000" />
     </task>
     <servers />
   </component>
@@ -217,10 +216,14 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="665" y="355" width="579" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602236320835">
+    <state x="418" y="211" width="1084" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602320266021">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="665" y="355" width="579" height="403" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1602236320835" />
+    <state x="418" y="211" width="1084" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1602320266021" />
+    <state x="665" y="355" width="905" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602316790484">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="665" y="355" width="905" height="403" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1602316790484" />
     <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1602164556076">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -237,10 +240,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1874" height="275" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1602164556076" />
-    <state x="755" y="479" width="399" height="156" key="NewPhpFileDialog" timestamp="1602229798330">
+    <state x="755" y="479" width="399" height="156" key="NewPhpFileDialog" timestamp="1602317457070">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="755" y="479" width="399" height="156" key="NewPhpFileDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1602229798330" />
+    <state x="755" y="479" width="399" height="156" key="NewPhpFileDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1602317457070" />
     <state x="449" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1602147211304">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
