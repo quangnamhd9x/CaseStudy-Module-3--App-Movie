@@ -39,7 +39,7 @@
     <!-- Sidebar-->
     <div class="iq-sidebar">
         <div class="iq-sidebar-logo d-flex justify-content-between">
-            <a href="index-2.html" class="header-logo">
+            <a href="{{route('admin.dashboard')}}" class="header-logo">
                 <img src="admin_resource/assets/images/logo.png" class="img-fluid rounded-normal" alt="">
                 <div class="logo-title">
                     <span class="text-primary text-uppercase">Streamit</span>
