@@ -25,12 +25,12 @@ class IndexController extends Controller
 //        return view('guest.detail', compact('movies', 'categories', 'languages', 'qualities'));
 //    }
 
-    public function showDetail(){
-        $movies = Movie::all();
+    public function showDetail($id){
+        $movie = Movie::findOrFail($id);
         $categories = Category::all();
         $languages = Language::all();
         $qualities = Quality::all();
-        return view('guest.detail', compact('movies', 'categories', 'languages', 'qualities'));
+        return view('guest.detail', compact('movie', 'categories', 'languages', 'qualities'));
     }
 
     public function detail(Request $request, $id){

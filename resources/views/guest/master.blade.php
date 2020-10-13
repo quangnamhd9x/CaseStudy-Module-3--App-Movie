@@ -43,13 +43,13 @@
                                 <span class="navbar-menu-icon navbar-menu-icon--bottom"></span>
                             </div>
                         </a>
-                        <a class="navbar-brand" href="index-2.html"> <img class="img-fluid logo" src="index_resource/images/logo.png"
+                        <a class="navbar-brand" href="{{route('view.index')}}"> <img class="img-fluid logo" src="index_resource/images/logo.png"
                                                                           alt="streamit" /> </a>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <div class="menu-main-menu-container">
                                 <ul id="top-menu" class="navbar-nav ml-auto">
                                     <li class="menu-item">
-                                        <a href="index-2.html">Home</a>
+                                        <a href="{{route('view.index')}}">Home</a>
                                     </li>
                                     <li class="menu-item">
                                         <a href="show-category.html">Tv Shows</a>

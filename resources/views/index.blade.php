@@ -462,17 +462,16 @@
                     </div>
                     <div class="favorites-contens">
                         <ul class="favorites-slider list-inline  row p-0 mb-0">
-                            @foreach($favorites as $key => $favorite)
+                            @foreach($movies as $key => $movie)
+                                @if($movie->status == 1)
                             <li class="slide-item">
-{{--                                    @foreach($movies as $key => $movie)--}}
-                                <a href="{{route('view.detail')}}">
-{{--                                    @endforeach--}}
+                                        <a href="{{route('view.detail',$movie->id)}}">
                                     <div class="block-images position-relative">
                                         <div class="img-box">
-                                            <img src="{{$favorite->getNameImage()}}" class="img-fluid" alt="">
+                                            <img src="{{$movie->getNameImage()}}" class="img-fluid" alt="">
                                         </div>
                                         <div class="block-description">
-                                            <h6>{{$favorite->title}}</h6>
+                                            <h6>{{$movie->title}}</h6>
                                             <div class="hover-buttons">
                                           <span class="btn btn-hover">
                                           <i class="fa fa-play mr-1" aria-hidden="true"></i>
@@ -485,6 +484,7 @@
                                     </div>
                                 </a>
                             </li>
+                                @endif
                             @endforeach
                         </ul>
                     </div>
@@ -502,15 +502,16 @@
                     </div>
                     <div class="upcoming-contens">
                         <ul class="favorites-slider list-inline row p-0 mb-0">
-                            @foreach($upcomingMovies as $key => $upcomingMovie)
-                            <li class="slide-item">
-                                <a href="{{route('view.detail')}}">
+                            @foreach($movies as $key => $movie)
+                                @if($movie->status == 2)
+                            <li class="slide-item 11111">
+                                <a href="{{route('view.detail',$movie->id)}}">
                                     <div class="block-images position-relative">
                                         <div class="img-box">
-                                            <img src="{{$upcomingMovie->getNameImage()}}" class="img-fluid" alt="">
+                                            <img src="{{$movie->getNameImage()}}" class="img-fluid" alt="">
                                         </div>
                                         <div class="block-description">
-                                            <h6>{{$upcomingMovie->title}}</h6>
+                                            <h6>{{$movie->title}}</h6>
                                             <div class="hover-buttons">
                                           <span class="btn btn-hover"><i class="fa fa-play mr-1" aria-hidden="true"></i>
                                           Play Now
@@ -522,6 +523,7 @@
                                     </div>
                                 </a>
                             </li>
+                                @endif
                             @endforeach
                         </ul>
                     </div>

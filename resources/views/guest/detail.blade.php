@@ -2,11 +2,11 @@
 
 @section('content')
     <div class="video-container iq-main-slider">
-        @foreach($movies as $key => $movie)
+        <form action="{{route('movie.showDetail', $movie->id)}}" method="post" enctype="multipart/form-data">
         <video class="video d-block" controls loop>
             <source src="{{$movie->getNameVideo()}}" type="video/mp4">
         </video>
-        @endforeach
+        </form>
     </div>
 
     <div class="main-content movi">
