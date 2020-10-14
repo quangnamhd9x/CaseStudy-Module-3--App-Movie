@@ -8,12 +8,12 @@
                     <div class="iq-card">
                         <div class="iq-card-header d-flex justify-content-between">
                             <div class="iq-header-title">
-                                <h4 class="card-title">Add Movie</h4>
+                                <h4 class="card-title">Update Movie</h4>
                             </div>
 
                         </div>
                         <div class="iq-card-body">
-                            <form action="{{route('movie.showDetail', $movie->id)}}" method="post"
+                            <form action="{{route('movie.edit', $movie->id)}}" method="post"
                                   enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
