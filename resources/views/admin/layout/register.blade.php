@@ -50,9 +50,7 @@
                                     <input type="checkbox" class="custom-control-input" id="customCheck">
                                     <label class="custom-control-label" for="customCheck">I accept <a href="#" class="text-primary"> Terms and Conditions</a></label>
                                 </div>
-
                                 <button type="submit" class="btn btn-primary">Sign Up</button>
-
                             </form>
                         </div>
                     </div>

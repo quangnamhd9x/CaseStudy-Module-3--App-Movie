@@ -7,21 +7,23 @@ use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\QualityController;
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+
+Route::get('/login', [LoginController::class, 'showLogin'])->name('login');
+Route::post('/login', [LoginController::class, 'login'])->name('admin.login');
+Route::get('logout', [LoginController::class, 'logout'])->name('admin.logout');
+
+Route::get('/register', [LoginController::class, 'register'])->name('admin.layout.register');
+Route::post('/register', [LoginController::class, 'postRegister']);
 
 Route::prefix('/')->group(function () {
     Route::get('/', [IndexController::class, 'showIndex'])->name('view.index');
     Route::get('/{id}/detail', [IndexController::class, 'showDetail'])->name('view.detail');
 });
 
-Route::get('/login', [LoginController::class, 'showLogin'])->name('login');
-Route::post('/login', [LoginController::class, 'login'])->name('auth.login');
-
-Route::get('/register', [LoginController::class, 'register'])->name('admin.layout.register');
-Route::post('/register', [LoginController::class, 'postRegister']);
-
-Route::middleware(['auth'])->prefix('admin')->group(function () {
+Route::middleware('auth')->prefix('admin')->group(function () {
     Route::get('/', [DashboardController::class, 'showDashboard'])->name('admin.dashboard');
     Route::prefix('movies')->group(function () {
         Route::get('/add', [MovieController::class, 'create'])->name('movie.create');
@@ -63,5 +65,13 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
         Route::get('/{id}/edit', [QualityController::class, 'edit'])->name('quality.edit');
         Route::post('/{id}/edit', [QualityController::class, 'update'])->name('quality.update');
         Route::get('/{id}/destroy', [QualityController::class, 'destroy'])->name('quality.destroy');
+    });
+    Route::prefix('role')->group(function (){
+        Route::get('/', [RoleController::class, 'index'])->name('role.index');
+        Route::get('/add', [RoleController::class, 'create'])->name('role.create');
+        Route::post('/add', [RoleController::class, 'store'])->name('role.store');
+        Route::get('/{id}/edit', [RoleController::class, 'edit'])->name('role.edit');
+        Route::post('/{id}/edit', [RoleController::class, 'update'])->name('role.update');
+        Route::get('/{id}/destroy', [RoleController::class, 'destroy'])->name('role.destroy');
     });
 });

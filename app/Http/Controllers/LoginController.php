@@ -22,7 +22,6 @@ class LoginController extends Controller
         if (!Auth::attempt($user)){
             return redirect()->route('login');
         } else {
-
             return redirect()->route('admin.dashboard');
         }
     }
@@ -39,5 +38,8 @@ class LoginController extends Controller
         $user->save();
         return redirect()->route('admin.login');
     }
-
+    public function logout(){
+        Auth::logout();
+        return redirect()->route('login');
+    }
 }
