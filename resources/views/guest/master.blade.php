@@ -147,26 +147,26 @@
                                                                 </div>
                                                             </div>
                                                         </a>
-                                                        <a href="setting.html" class="iq-sub-card setting-dropdown">
-                                                            <div class="media align-items-center">
-                                                                <div class="right-icon">
-                                                                    <i class="ri-settings-4-line text-primary"></i>
-                                                                </div>
-                                                                <div class="media-body ml-3">
-                                                                    <h6 class="mb-0 ">Settings</h6>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                        <a href="pricing-plan.html" class="iq-sub-card setting-dropdown">
-                                                            <div class="media align-items-center">
-                                                                <div class="right-icon">
-                                                                    <i class="ri-settings-4-line text-primary"></i>
-                                                                </div>
-                                                                <div class="media-body ml-3">
-                                                                    <h6 class="mb-0 ">Pricing Plan</h6>
-                                                                </div>
-                                                            </div>
-                                                        </a>
+{{--                                                        <a href="setting.html" class="iq-sub-card setting-dropdown">--}}
+{{--                                                            <div class="media align-items-center">--}}
+{{--                                                                <div class="right-icon">--}}
+{{--                                                                    <i class="ri-settings-4-line text-primary"></i>--}}
+{{--                                                                </div>--}}
+{{--                                                                <div class="media-body ml-3">--}}
+{{--                                                                    <h6 class="mb-0 ">Settings</h6>--}}
+{{--                                                                </div>--}}
+{{--                                                            </div>--}}
+{{--                                                        </a>--}}
+{{--                                                        <a href="pricing-plan.html" class="iq-sub-card setting-dropdown">--}}
+{{--                                                            <div class="media align-items-center">--}}
+{{--                                                                <div class="right-icon">--}}
+{{--                                                                    <i class="ri-settings-4-line text-primary"></i>--}}
+{{--                                                                </div>--}}
+{{--                                                                <div class="media-body ml-3">--}}
+{{--                                                                    <h6 class="mb-0 ">Pricing Plan</h6>--}}
+{{--                                                                </div>--}}
+{{--                                                            </div>--}}
+{{--                                                        </a>--}}
                                                         <a href="{{route('login')}}" class="iq-sub-card setting-dropdown">
                                                             <div class="media align-items-center">
                                                                 <div class="right-icon">
