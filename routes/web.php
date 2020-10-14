@@ -4,6 +4,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('/')->group(function () {
@@ -30,6 +31,11 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
         Route::get('/{id}/detail', [MovieController::class, 'showDetail'])->name('movie.showDetail');
     });
     Route::prefix('user')->group(function (){
-        Route::get('user', [\App\Http\Controllers\UserController::class, 'index'])->name('user.index');
+        Route::get('/', [UserController::class, 'index'])->name('user.index');
+        Route::get('/add', [UserController::class, 'create'])->name('user.create');
+        Route::post('/add', [UserController::class, 'store'])->name('user.store');
+        Route::get('/{id}/edit', [UserController::class, 'edit'])->name('user.edit');
+        Route::post('/{id}/edit', [UserController::class, 'update'])->name('user.update');
+        Route::get('/{id}/destroy', [UserController::class, 'destroy'])->name('user.destroy');
     });
 });
