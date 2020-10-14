@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -17,9 +18,24 @@ class LoginController extends Controller
         $user = [
             'email' => $request->email,
             'password' => $request->password,
+            'role_id' => $request->role_id = 1,
         ];
 
         if (!Auth::attempt($user)){
+            return redirect()->route('login');
+        } else {
+            return redirect()->route('view.index');
+        }
+    }
+
+    public function loginAdmin(Request $request){
+        $admin = [
+            'email' => $request->email,
+            'password' => $request->password,
+            'role_id' => $request->role_id = 2,
+        ];
+
+        if (!Auth::attempt($admin)){
             return redirect()->route('login');
         } else {
             return redirect()->route('admin.dashboard');
@@ -35,6 +51,7 @@ class LoginController extends Controller
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
+        $user->role_id = 1;
         $user->save();
         return redirect()->route('admin.login');
     }
