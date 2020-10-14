@@ -59,7 +59,7 @@
                     <li class="active active-menu"><a href="{{route('admin.dashboard')}}" class="iq-waves-effect"><i class="las la-home iq-arrow-left"></i><span>Dashboard</span></a></li>
 {{--                    <li><a href="rating.html" class="iq-waves-effect"><i class="las la-star-half-alt"></i><span>Rating </span></a></li>--}}
 {{--                    <li><a href="comment.html" class="iq-waves-effect"><i class="las la-comments"></i><span>Comment</span></a></li>--}}
-                    <li><a href="user.html" class="iq-waves-effect"><i class="las la-user-friends"></i><span>User</span></a></li>
+                    <li><a href="{{route('user.index')}}" class="iq-waves-effect"><i class="las la-user-friends"></i><span>User</span></a></li>
                     <li>
                         <a href="#category" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-list-ul"></i><span>Category</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                         <ul id="category" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">

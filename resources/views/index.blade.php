@@ -83,56 +83,56 @@
                                                 </form>
                                             </div>
                                         </li>
-                                        <li class="nav-item nav-icon">
-                                            <a href="#" class="search-toggle position-relative">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22"
-                                                     height="22" class="noti-svg">
-                                                    <path fill="none" d="M0 0h24v24H0z"/>
-                                                    <path
-                                                        d="M18 10a6 6 0 1 0-12 0v8h12v-8zm2 8.667l.4.533a.5.5 0 0 1-.4.8H4a.5.5 0 0 1-.4-.8l.4-.533V10a8 8 0 1 1 16 0v8.667zM9.5 21h5a2.5 2.5 0 1 1-5 0z"/>
-                                                </svg>
-                                                <span class="bg-danger dots"></span>
-                                            </a>
-                                            <div class="iq-sub-dropdown">
-                                                <div class="iq-card shadow-none m-0">
-                                                    <div class="iq-card-body">
-                                                        <a href="#" class="iq-sub-card">
-                                                            <div class="media align-items-center">
-                                                                <img src="index_resource/images/notify/thumb-1.jpg"
-                                                                     class="img-fluid mr-3"
-                                                                     alt="streamit"/>
-                                                                <div class="media-body">
-                                                                    <h6 class="mb-0 ">Boop Bitty</h6>
-                                                                    <small class="font-size-12"> just now</small>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                        <a href="#" class="iq-sub-card">
-                                                            <div class="media align-items-center">
-                                                                <img src="index_resource/images/notify/thumb-2.jpg"
-                                                                     class="img-fluid mr-3"
-                                                                     alt="streamit"/>
-                                                                <div class="media-body">
-                                                                    <h6 class="mb-0 ">The Last Breath</h6>
-                                                                    <small class="font-size-12">15 minutes ago</small>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                        <a href="#" class="iq-sub-card">
-                                                            <div class="media align-items-center">
-                                                                <img src="index_resource/images/notify/thumb-3.jpg"
-                                                                     class="img-fluid mr-3"
-                                                                     alt="streamit"/>
-                                                                <div class="media-body">
-                                                                    <h6 class="mb-0 ">The Hero Camp</h6>
-                                                                    <small class="font-size-12">1 hour ago</small>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
+                                        {{--                                        <li class="nav-item nav-icon">--}}
+                                        {{--                                            <a href="#" class="search-toggle position-relative">--}}
+                                        {{--                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22"--}}
+                                        {{--                                                     height="22" class="noti-svg">--}}
+                                        {{--                                                    <path fill="none" d="M0 0h24v24H0z"/>--}}
+                                        {{--                                                    <path--}}
+                                        {{--                                                        d="M18 10a6 6 0 1 0-12 0v8h12v-8zm2 8.667l.4.533a.5.5 0 0 1-.4.8H4a.5.5 0 0 1-.4-.8l.4-.533V10a8 8 0 1 1 16 0v8.667zM9.5 21h5a2.5 2.5 0 1 1-5 0z"/>--}}
+                                        {{--                                                </svg>--}}
+                                        {{--                                                <span class="bg-danger dots"></span>--}}
+                                        {{--                                            </a>--}}
+                                        {{--                                            <div class="iq-sub-dropdown">--}}
+                                        {{--                                                <div class="iq-card shadow-none m-0">--}}
+                                        {{--                                                    <div class="iq-card-body">--}}
+                                        {{--                                                        <a href="#" class="iq-sub-card">--}}
+                                        {{--                                                            <div class="media align-items-center">--}}
+                                        {{--                                                                <img src="index_resource/images/notify/thumb-1.jpg"--}}
+                                        {{--                                                                     class="img-fluid mr-3"--}}
+                                        {{--                                                                     alt="streamit"/>--}}
+                                        {{--                                                                <div class="media-body">--}}
+                                        {{--                                                                    <h6 class="mb-0 ">Boop Bitty</h6>--}}
+                                        {{--                                                                    <small class="font-size-12"> just now</small>--}}
+                                        {{--                                                                </div>--}}
+                                        {{--                                                            </div>--}}
+                                        {{--                                                        </a>--}}
+                                        {{--                                                        <a href="#" class="iq-sub-card">--}}
+                                        {{--                                                            <div class="media align-items-center">--}}
+                                        {{--                                                                <img src="index_resource/images/notify/thumb-2.jpg"--}}
+                                        {{--                                                                     class="img-fluid mr-3"--}}
+                                        {{--                                                                     alt="streamit"/>--}}
+                                        {{--                                                                <div class="media-body">--}}
+                                        {{--                                                                    <h6 class="mb-0 ">The Last Breath</h6>--}}
+                                        {{--                                                                    <small class="font-size-12">15 minutes ago</small>--}}
+                                        {{--                                                                </div>--}}
+                                        {{--                                                            </div>--}}
+                                        {{--                                                        </a>--}}
+                                        {{--                                                        <a href="#" class="iq-sub-card">--}}
+                                        {{--                                                            <div class="media align-items-center">--}}
+                                        {{--                                                                <img src="index_resource/images/notify/thumb-3.jpg"--}}
+                                        {{--                                                                     class="img-fluid mr-3"--}}
+                                        {{--                                                                     alt="streamit"/>--}}
+                                        {{--                                                                <div class="media-body">--}}
+                                        {{--                                                                    <h6 class="mb-0 ">The Hero Camp</h6>--}}
+                                        {{--                                                                    <small class="font-size-12">1 hour ago</small>--}}
+                                        {{--                                                                </div>--}}
+                                        {{--                                                            </div>--}}
+                                        {{--                                                        </a>--}}
+                                        {{--                                                    </div>--}}
+                                        {{--                                                </div>--}}
+                                        {{--                                            </div>--}}
+                                        {{--                                        </li>--}}
                                         <li>
                                             <a href="#"
                                                class="iq-user-dropdown search-toggle d-flex align-items-center">
@@ -210,57 +210,57 @@
                                         </form>
                                     </div>
                                 </li>
-                                <li class="nav-item nav-icon">
-                                    <a href="#" class="search-toggle" data-toggle="search-toggle">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22"
-                                             height="22"
-                                             class="noti-svg">
-                                            <path fill="none" d="M0 0h24v24H0z"/>
-                                            <path
-                                                d="M18 10a6 6 0 1 0-12 0v8h12v-8zm2 8.667l.4.533a.5.5 0 0 1-.4.8H4a.5.5 0 0 1-.4-.8l.4-.533V10a8 8 0 1 1 16 0v8.667zM9.5 21h5a2.5 2.5 0 1 1-5 0z"/>
-                                        </svg>
-                                        <span class="bg-danger dots"></span>
-                                    </a>
-                                    <div class="iq-sub-dropdown">
-                                        <div class="iq-card shadow-none m-0">
-                                            <div class="iq-card-body">
-                                                <a href="#" class="iq-sub-card">
-                                                    <div class="media align-items-center">
-                                                        <img src="index_resource/images/notify/thumb-1.jpg"
-                                                             class="img-fluid mr-3"
-                                                             alt="streamit"/>
-                                                        <div class="media-body">
-                                                            <h6 class="mb-0 ">Boot Bitty</h6>
-                                                            <small class="font-size-12"> just now</small>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <a href="#" class="iq-sub-card">
-                                                    <div class="media align-items-center">
-                                                        <img src="index_resource/images/notify/thumb-2.jpg"
-                                                             class="img-fluid mr-3"
-                                                             alt="streamit"/>
-                                                        <div class="media-body">
-                                                            <h6 class="mb-0 ">The Last Breath</h6>
-                                                            <small class="font-size-12">15 minutes ago</small>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                <a href="#" class="iq-sub-card">
-                                                    <div class="media align-items-center">
-                                                        <img src="index_resource/images/notify/thumb-3.jpg"
-                                                             class="img-fluid mr-3"
-                                                             alt="streamit"/>
-                                                        <div class="media-body">
-                                                            <h6 class="mb-0 ">The Hero Camp</h6>
-                                                            <small class="font-size-12">1 hour ago</small>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
+                                {{--                                <li class="nav-item nav-icon">--}}
+                                {{--                                    <a href="#" class="search-toggle" data-toggle="search-toggle">--}}
+                                {{--                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22"--}}
+                                {{--                                             height="22"--}}
+                                {{--                                             class="noti-svg">--}}
+                                {{--                                            <path fill="none" d="M0 0h24v24H0z"/>--}}
+                                {{--                                            <path--}}
+                                {{--                                                d="M18 10a6 6 0 1 0-12 0v8h12v-8zm2 8.667l.4.533a.5.5 0 0 1-.4.8H4a.5.5 0 0 1-.4-.8l.4-.533V10a8 8 0 1 1 16 0v8.667zM9.5 21h5a2.5 2.5 0 1 1-5 0z"/>--}}
+                                {{--                                        </svg>--}}
+                                {{--                                        <span class="bg-danger dots"></span>--}}
+                                {{--                                    </a>--}}
+                                {{--                                    <div class="iq-sub-dropdown">--}}
+                                {{--                                        <div class="iq-card shadow-none m-0">--}}
+                                {{--                                            <div class="iq-card-body">--}}
+                                {{--                                                <a href="#" class="iq-sub-card">--}}
+                                {{--                                                    <div class="media align-items-center">--}}
+                                {{--                                                        <img src="index_resource/images/notify/thumb-1.jpg"--}}
+                                {{--                                                             class="img-fluid mr-3"--}}
+                                {{--                                                             alt="streamit"/>--}}
+                                {{--                                                        <div class="media-body">--}}
+                                {{--                                                            <h6 class="mb-0 ">Boot Bitty</h6>--}}
+                                {{--                                                            <small class="font-size-12"> just now</small>--}}
+                                {{--                                                        </div>--}}
+                                {{--                                                    </div>--}}
+                                {{--                                                </a>--}}
+                                {{--                                                <a href="#" class="iq-sub-card">--}}
+                                {{--                                                    <div class="media align-items-center">--}}
+                                {{--                                                        <img src="index_resource/images/notify/thumb-2.jpg"--}}
+                                {{--                                                             class="img-fluid mr-3"--}}
+                                {{--                                                             alt="streamit"/>--}}
+                                {{--                                                        <div class="media-body">--}}
+                                {{--                                                            <h6 class="mb-0 ">The Last Breath</h6>--}}
+                                {{--                                                            <small class="font-size-12">15 minutes ago</small>--}}
+                                {{--                                                        </div>--}}
+                                {{--                                                    </div>--}}
+                                {{--                                                </a>--}}
+                                {{--                                                <a href="#" class="iq-sub-card">--}}
+                                {{--                                                    <div class="media align-items-center">--}}
+                                {{--                                                        <img src="index_resource/images/notify/thumb-3.jpg"--}}
+                                {{--                                                             class="img-fluid mr-3"--}}
+                                {{--                                                             alt="streamit"/>--}}
+                                {{--                                                        <div class="media-body">--}}
+                                {{--                                                            <h6 class="mb-0 ">The Hero Camp</h6>--}}
+                                {{--                                                            <small class="font-size-12">1 hour ago</small>--}}
+                                {{--                                                        </div>--}}
+                                {{--                                                    </div>--}}
+                                {{--                                                </a>--}}
+                                {{--                                            </div>--}}
+                                {{--                                        </div>--}}
+                                {{--                                    </div>--}}
+                                {{--                                </li>--}}
                                 <li class="nav-item nav-icon">
                                     <a href="#" class="iq-user-dropdown search-toggle p-0 d-flex align-items-center"
                                        data-toggle="search-toggle">
@@ -341,10 +341,10 @@
                                 </a>
                                 <h1 class="slider-text big-title title text-uppercase" data-animation-in="fadeInLeft"
                                     data-delay-in="0.6">{{$movie->title}}</h1>
-{{--                                <div class="d-flex align-items-center" data-animation-in="fadeInUp" data-delay-in="1">--}}
-{{--                                    <span class="badge badge-secondary p-2">18+</span>--}}
-{{--                                    <span class="ml-3">2 Seasons</span>--}}
-{{--                                </div>--}}
+                                {{--                                <div class="d-flex align-items-center" data-animation-in="fadeInUp" data-delay-in="1">--}}
+                                {{--                                    <span class="badge badge-secondary p-2">18+</span>--}}
+                                {{--                                    <span class="ml-3">2 Seasons</span>--}}
+                                {{--                                </div>--}}
                                 <p data-animation-in="fadeInUp" data-delay-in="1.2">{{$movie->description}}
                                 </p>
                                 <div class="d-flex align-items-center r-mb-23" data-animation-in="fadeInUp"
@@ -357,20 +357,20 @@
                             </div>
                         </div>
                         <div class="trailor-video">
-                            <a href="video/trailer.mp4" class="video-open playbtn">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                     xmlns:xlink="http://www.w3.org/1999/xlink"
-                                     x="0px" y="0px" width="80px" height="80px" viewBox="0 0 213.7 213.7"
-                                     enable-background="new 0 0 213.7 213.7" xml:space="preserve">
+                                <a href="{{$movie->getNameVideo()}}" class="video-open playbtn">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         x="0px" y="0px" width="80px" height="80px" viewBox="0 0 213.7 213.7"
+                                         enable-background="new 0 0 213.7 213.7" xml:space="preserve">
                               <polygon class='triangle' fill="none" stroke-width="7" stroke-linecap="round"
                                        stroke-linejoin="round" stroke-miterlimit="10"
                                        points="73.5,62.5 148.5,105.8 73.5,149.1 "/>
-                                    <circle class='circle' fill="none" stroke-width="7" stroke-linecap="round"
-                                            stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8"
-                                            r="103.3"/>
+                                        <circle class='circle' fill="none" stroke-width="7" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8"
+                                                r="103.3"/>
                            </svg>
-                                <span class="w-trailor">Watch Trailer</span>
-                            </a>
+                                    <span class="w-trailor">Watch</span>
+                                </a>
                         </div>
                     </div>
                 </div>
@@ -479,6 +479,44 @@
 <!-- Slider End -->
 <!-- MainContent -->
 <div class="main-content">
+    <section id="iq-favorites">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 overflow-hidden">
+                    <div class="iq-main-header d-flex align-items-center justify-content-between">
+                        <h4 class="main-title">All Movie</h4>
+                        <a href="movie-category.html" class="text-primary">View all</a>
+                    </div>
+                    <div class="favorites-contens">
+                        <ul class="favorites-slider list-inline  row p-0 mb-0">
+                            @foreach($movies as $key => $movie)
+                                <li class="slide-item">
+                                    <a href="{{route('view.detail',$movie->id)}}">
+                                        <div class="block-images position-relative">
+                                            <div class="img-box">
+                                                <img src="{{$movie->getNameImage()}}" class="img-fluid" alt="">
+                                            </div>
+                                            <div class="block-description">
+                                                <h6>{{$movie->title}}</h6>
+                                                <div class="hover-buttons">
+                                          <span class="btn btn-hover">
+                                          <i class="fa fa-play mr-1" aria-hidden="true"></i>
+                                          Play Now
+                                          </span>
+                                                </div>
+                                            </div>
+                                            <div class="block-social-info">
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="iq-favorites">
         <div class="container-fluid">
             <div class="row">
