@@ -59,14 +59,7 @@
                     <li class="active active-menu"><a href="{{route('admin.dashboard')}}" class="iq-waves-effect"><i class="las la-home iq-arrow-left"></i><span>Dashboard</span></a></li>
 {{--                    <li><a href="rating.html" class="iq-waves-effect"><i class="las la-star-half-alt"></i><span>Rating </span></a></li>--}}
 {{--                    <li><a href="comment.html" class="iq-waves-effect"><i class="las la-comments"></i><span>Comment</span></a></li>--}}
-                    <li><a href="{{route('user.index')}}" class="iq-waves-effect"><i class="las la-user-friends"></i><span>User</span></a></li>
-                    <li>
-                        <a href="#category" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-list-ul"></i><span>Category</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                        <ul id="category" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                            <li><a href="add-category.html"><i class="las la-user-plus"></i>Add Category</a></li>
-                            <li><a href="category-list.html"><i class="las la-eye"></i>Category List</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="{{route('user.index')}}" class="iq-waves-effect"><i class="las la-user-friends"></i><span style="color: white; font-size: 20px"><b>User</b></span></a></li>
                     <li>
                         <a href="#movie" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-film"></i><span>Movie</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                         <ul id="movie" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
@@ -75,15 +68,49 @@
                         </ul>
                     </li>
                     <li>
+                        <a href="#category" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-list-ul"></i><span>Category</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                        <ul id="category" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                            <li><a href="{{route('category.create')}}"><i class="las la-user-plus"></i>Add Category</a></li>
+                            <li><a href="{{route('category.index')}}"><i class="las la-eye"></i>Category List</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#language" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-film"></i><span>Language</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                        <ul id="language" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                            <li><a href="{{route('language.create')}}"><i class="las la-user-plus"></i>Add Language</a></li>
+                            <li><a href="{{route('language.index')}}"><i class="las la-eye"></i>Language List</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#quality" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-film"></i><span>Quality</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                        <ul id="quality" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                            <li><a href="{{route('quality.create')}}"><i class="las la-user-plus"></i>Add Quality</a></li>
+                            <li><a href="{{route('quality.index')}}"><i class="las la-eye"></i>Quality List</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#role" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-film"></i><span>Role</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                        <ul id="role" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                            <li><a href="{{route('movie.create')}}"><i class="las la-user-plus"></i>Add Role</a></li>
+                            <li><a href="{{route('movie.list')}}"><i class="las la-eye"></i>Role List</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#comment" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-film"></i><span>Comment</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                        <ul id="comment" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                            <li><a href="{{route('movie.create')}}"><i class="las la-user-plus"></i>Show Comments</a></li>
+                        </ul>
+                    </li>
+{{--                    <li>--}}
 {{--                        <a href="#show" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i--}}
 {{--                                class="las la-film"></i><span>Show</span><i--}}
 {{--                                class="ri-arrow-right-s-line iq-arrow-right"></i>--}}
 {{--                        </a>--}}
-                        <ul id="show" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                            <li><a href="add-show.html"><i class="las la-user-plus"></i>Add Show</a></li>
-                            <li><a href="show-list.html"><i class="las la-eye"></i>Show List</a></li>
-                        </ul>
-                    </li>
+{{--                        <ul id="show" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">--}}
+{{--                            <li><a href="add-show.html"><i class="las la-user-plus"></i>Add Show</a></li>--}}
+{{--                            <li><a href="show-list.html"><i class="las la-eye"></i>Show List</a></li>--}}
+{{--                        </ul>--}}
+{{--                    </li>--}}
 {{--                    <li><a href="pages-pricing.html" class="iq-waves-effect"><i class="ri-price-tag-line"></i><span>Pricing</span></a></li>--}}
                     <li>
 {{--                        <a href="#ui-elements" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="lab la-elementor iq-arrow-left"></i><span>UI Elements</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>--}}
@@ -152,34 +179,34 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="{{route('view.index')}}" class="iq-waves-effect collapsed" data-toggle="collapse" type="button" aria-expanded="false">Movie Page</a>
-                        <ul id="pages" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                            <li>
-                                <a href="#authentication" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-pages-line"></i><span>Authentication</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                                <ul id="authentication" class="iq-submenu collapse" data-parent="#pages">
-                                    <li><a href="sign-in.html"><i class="las la-sign-in-alt"></i>Login</a></li>
-                                    <li><a href="sign-up.html"><i class="ri-login-circle-line"></i>Register</a></li>
-                                    <li><a href="pages-recoverpw.html"><i class="ri-record-mail-line"></i>Recover Password</a></li>
-                                    <li><a href="pages-confirm-mail.html"><i class="ri-file-code-line"></i>Confirm Mail</a></li>
-                                    <li><a href="pages-lock-screen.html"><i class="ri-lock-line"></i>Lock Screen</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#extra-pages" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-pantone-line"></i><span>Extra Pages</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                                <ul id="extra-pages" class="iq-submenu collapse" data-parent="#pages">
-                                    <li><a href="pages-timeline.html"><i class="ri-map-pin-time-line"></i>Timeline</a></li>
-                                    <li><a href="pages-invoice.html"><i class="ri-question-answer-line"></i>Invoice</a></li>
-                                    <li><a href="blank-page.html"><i class="ri-invision-line"></i>Blank Page</a></li>
-                                    <li><a href="pages-error.html"><i class="ri-error-warning-line"></i>Error 404</a></li>
-                                    <li><a href="pages-error-500.html"><i class="ri-error-warning-line"></i>Error 500</a></li>
+                        <a href="{{route('view.index')}}" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false">Movie Page</a>
+{{--                        <ul id="pages" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">--}}
+{{--                            <li>--}}
+{{--                                <a href="#authentication" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-pages-line"></i><span>Authentication</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>--}}
+{{--                                <ul id="authentication" class="iq-submenu collapse" data-parent="#pages">--}}
+{{--                                    <li><a href="sign-in.html"><i class="las la-sign-in-alt"></i>Login</a></li>--}}
+{{--                                    <li><a href="sign-up.html"><i class="ri-login-circle-line"></i>Register</a></li>--}}
+{{--                                    <li><a href="pages-recoverpw.html"><i class="ri-record-mail-line"></i>Recover Password</a></li>--}}
+{{--                                    <li><a href="pages-confirm-mail.html"><i class="ri-file-code-line"></i>Confirm Mail</a></li>--}}
+{{--                                    <li><a href="pages-lock-screen.html"><i class="ri-lock-line"></i>Lock Screen</a></li>--}}
+{{--                                </ul>--}}
+{{--                            </li>--}}
+{{--                            <li>--}}
+{{--                                <a href="#extra-pages" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-pantone-line"></i><span>Extra Pages</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>--}}
+{{--                                <ul id="extra-pages" class="iq-submenu collapse" data-parent="#pages">--}}
+{{--                                    <li><a href="pages-timeline.html"><i class="ri-map-pin-time-line"></i>Timeline</a></li>--}}
+{{--                                    <li><a href="pages-invoice.html"><i class="ri-question-answer-line"></i>Invoice</a></li>--}}
+{{--                                    <li><a href="blank-page.html"><i class="ri-invision-line"></i>Blank Page</a></li>--}}
+{{--                                    <li><a href="pages-error.html"><i class="ri-error-warning-line"></i>Error 404</a></li>--}}
+{{--                                    <li><a href="pages-error-500.html"><i class="ri-error-warning-line"></i>Error 500</a></li>--}}
 
-                                    <li><a href="pages-pricing-one.html"><i class="ri-price-tag-2-line"></i>Pricing 1</a></li>
-                                    <li><a href="pages-maintenance.html"><i class="ri-archive-line"></i>Maintenance</a></li>
-                                    <li><a href="pages-comingsoon.html"><i class="ri-mastercard-line"></i>Coming Soon</a></li>
-                                    <li><a href="pages-faq.html"><i class="ri-compasses-line"></i>Faq</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+{{--                                    <li><a href="pages-pricing-one.html"><i class="ri-price-tag-2-line"></i>Pricing 1</a></li>--}}
+{{--                                    <li><a href="pages-maintenance.html"><i class="ri-archive-line"></i>Maintenance</a></li>--}}
+{{--                                    <li><a href="pages-comingsoon.html"><i class="ri-mastercard-line"></i>Coming Soon</a></li>--}}
+{{--                                    <li><a href="pages-faq.html"><i class="ri-compasses-line"></i>Faq</a></li>--}}
+{{--                                </ul>--}}
+{{--                            </li>--}}
+{{--                        </ul>--}}
                     </li>
                 </ul>
             </nav>

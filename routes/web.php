@@ -1,16 +1,18 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\QualityController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('/')->group(function () {
     Route::get('/', [IndexController::class, 'showIndex'])->name('view.index');
     Route::get('/{id}/detail', [IndexController::class, 'showDetail'])->name('view.detail');
-//    Route::post('/movie/{id}/detail', [IndexController::class, 'detail'])->name('view.detail');
 });
 
 Route::get('/login', [LoginController::class, 'showLogin'])->name('login');
@@ -37,5 +39,29 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
         Route::get('/{id}/edit', [UserController::class, 'edit'])->name('user.edit');
         Route::post('/{id}/edit', [UserController::class, 'update'])->name('user.update');
         Route::get('/{id}/destroy', [UserController::class, 'destroy'])->name('user.destroy');
+    });
+    Route::prefix('category')->group(function (){
+        Route::get('/', [CategoryController::class, 'index'])->name('category.index');
+        Route::get('/add', [CategoryController::class, 'create'])->name('category.create');
+        Route::post('/add', [CategoryController::class, 'store'])->name('category.store');
+        Route::get('/{id}/edit', [CategoryController::class, 'edit'])->name('category.edit');
+        Route::post('/{id}/edit', [CategoryController::class, 'update'])->name('category.update');
+        Route::get('/{id}/destroy', [CategoryController::class, 'destroy'])->name('category.destroy');
+    });
+    Route::prefix('language')->group(function (){
+        Route::get('/', [LanguageController::class, 'index'])->name('language.index');
+        Route::get('/add', [LanguageController::class, 'create'])->name('language.create');
+        Route::post('/add', [LanguageController::class, 'store'])->name('language.store');
+        Route::get('/{id}/edit', [LanguageController::class, 'edit'])->name('language.edit');
+        Route::post('/{id}/edit', [LanguageController::class, 'update'])->name('language.update');
+        Route::get('/{id}/destroy', [LanguageController::class, 'destroy'])->name('language.destroy');
+    });
+    Route::prefix('quality')->group(function (){
+        Route::get('/', [QualityController::class, 'index'])->name('quality.index');
+        Route::get('/add', [QualityController::class, 'create'])->name('quality.create');
+        Route::post('/add', [QualityController::class, 'store'])->name('quality.store');
+        Route::get('/{id}/edit', [QualityController::class, 'edit'])->name('quality.edit');
+        Route::post('/{id}/edit', [QualityController::class, 'update'])->name('quality.update');
+        Route::get('/{id}/destroy', [QualityController::class, 'destroy'])->name('quality.destroy');
     });
 });
