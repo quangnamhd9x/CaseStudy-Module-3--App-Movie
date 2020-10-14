@@ -56,9 +56,9 @@
         <div id="sidebar-scrollbar">
             <nav class="iq-sidebar-menu">
                 <ul id="iq-sidebar-toggle" class="iq-menu">
-                    <li class="active active-menu"><a href="index-2.html" class="iq-waves-effect"><i class="las la-home iq-arrow-left"></i><span>Dashboard</span></a></li>
-                    <li><a href="rating.html" class="iq-waves-effect"><i class="las la-star-half-alt"></i><span>Rating </span></a></li>
-                    <li><a href="comment.html" class="iq-waves-effect"><i class="las la-comments"></i><span>Comment</span></a></li>
+                    <li class="active active-menu"><a href="{{route('admin.dashboard')}}" class="iq-waves-effect"><i class="las la-home iq-arrow-left"></i><span>Dashboard</span></a></li>
+{{--                    <li><a href="rating.html" class="iq-waves-effect"><i class="las la-star-half-alt"></i><span>Rating </span></a></li>--}}
+{{--                    <li><a href="comment.html" class="iq-waves-effect"><i class="las la-comments"></i><span>Comment</span></a></li>--}}
                     <li><a href="user.html" class="iq-waves-effect"><i class="las la-user-friends"></i><span>User</span></a></li>
                     <li>
                         <a href="#category" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-list-ul"></i><span>Category</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
@@ -75,18 +75,18 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#show" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i
-                                class="las la-film"></i><span>Show</span><i
-                                class="ri-arrow-right-s-line iq-arrow-right"></i>
-                        </a>
+{{--                        <a href="#show" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i--}}
+{{--                                class="las la-film"></i><span>Show</span><i--}}
+{{--                                class="ri-arrow-right-s-line iq-arrow-right"></i>--}}
+{{--                        </a>--}}
                         <ul id="show" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                             <li><a href="add-show.html"><i class="las la-user-plus"></i>Add Show</a></li>
                             <li><a href="show-list.html"><i class="las la-eye"></i>Show List</a></li>
                         </ul>
                     </li>
-                    <li><a href="pages-pricing.html" class="iq-waves-effect"><i class="ri-price-tag-line"></i><span>Pricing</span></a></li>
+{{--                    <li><a href="pages-pricing.html" class="iq-waves-effect"><i class="ri-price-tag-line"></i><span>Pricing</span></a></li>--}}
                     <li>
-                        <a href="#ui-elements" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="lab la-elementor iq-arrow-left"></i><span>UI Elements</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+{{--                        <a href="#ui-elements" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="lab la-elementor iq-arrow-left"></i><span>UI Elements</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>--}}
                         <ul id="ui-elements" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                             <li class="elements">
                                 <a href="#sub-menu" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-play-circle-line"></i><span>UI Kit</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
@@ -152,7 +152,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#pages" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-file-alt iq-arrow-left"></i><span>Pages</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                        <a href="{{route('view.index')}}" class="iq-waves-effect collapsed" data-toggle="collapse" type="button" aria-expanded="false">Movie Page</a>
                         <ul id="pages" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                             <li>
                                 <a href="#authentication" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-pages-line"></i><span>Authentication</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
@@ -194,7 +194,7 @@
                         <div class="main-circle"><i class="las la-bars"></i></div>
                     </div>
                     <div class="iq-navbar-logo d-flex justify-content-between">
-                        <a href="index-2.html" class="header-logo">
+                        <a href="{{route('admin.dashboard')}}" class="header-logo">
                             <img src="admin_resource/assets/images/logo.png" class="img-fluid rounded-normal" alt="">
                             <div class="logo-title">
                                 <span class="text-primary text-uppercase">Streamit</span>

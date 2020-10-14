@@ -29,4 +29,7 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
         Route::get('/{id}/destroy', [MovieController::class, 'destroy'])->name('movie.destroy');
         Route::get('/{id}/detail', [MovieController::class, 'showDetail'])->name('movie.showDetail');
     });
+    Route::prefix('user')->group(function (){
+        Route::get('user', [\App\Http\Controllers\UserController::class, 'index'])->name('user.index');
+    });
 });
