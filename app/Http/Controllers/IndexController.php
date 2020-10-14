@@ -12,9 +12,10 @@ class IndexController extends Controller
 {
     public function showIndex(){
         $movies = Movie::all();
+        $movieSlide = Movie::where('id','<=', '3')->get();
         $upcomingMovies = Movie::where('status', '2')->get();
         $favorites = Movie::where('status', '1')->get();
-        return view('index', compact('upcomingMovies', 'favorites', 'movies'));
+        return view('index', compact('upcomingMovies', 'favorites', 'movies', 'movieSlide'));
     }
 
 //    public function showDetail($id){

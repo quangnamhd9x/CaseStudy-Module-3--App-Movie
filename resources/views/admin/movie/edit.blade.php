@@ -13,7 +13,8 @@
 
                         </div>
                         <div class="iq-card-body">
-                            <form action="{{route('movie.showDetail', $movie->id)}}" method="post" enctype="multipart/form-data">
+                            <form action="{{route('movie.showDetail', $movie->id)}}" method="post"
+                                  enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
                                     <div class="col-lg-7">
@@ -41,7 +42,7 @@
                                                             @if($category->id == $movie->category_id)
                                                             selected
                                                             @endif
-                                                            value="{{$category->id}}" >{{$category->name}}</option>
+                                                            value="{{$category->id}}">{{$category->name}}</option>
                                                     @endforeach
                                                 </select>
                                                 @error('category_id')
@@ -50,9 +51,13 @@
                                             </div>
                                             <div style="height: auto" class="col-sm-6 form-group">
                                                 <select name="quality_id" class="form-control"
-                                                        id="exampleFormControlSelect2" >
+                                                        id="exampleFormControlSelect2">
                                                     @foreach($qualities as $key =>$quality)
-                                                        <option value="{{$quality->id}}">{{$quality->name}}</option>
+                                                        <option
+                                                            @if($quality->id == $movie->quality_id)
+                                                            selected
+                                                            @endif
+                                                            value="{{$quality->id}}">{{$quality->name}}</option>
                                                     @endforeach
                                                 </select>
                                                 @error('quality_id')
@@ -71,7 +76,8 @@
                                     <div class="col-lg-5">
                                         <div class="d-block position-relative">
                                             <div class="form_video-upload">
-                                                <input value="{{$movie->video}}" name="video" type="file" accept="video/mp4,video/x-m4v,video/*"
+                                                <input value="{{$movie->video}}" name="video" type="file"
+                                                       accept="video/mp4,video/x-m4v,video/*"
                                                        multiple>
                                                 <p>Upload video</p>
                                                 @error('video')
@@ -83,7 +89,8 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6 form-group">
-                                        <input type="text" class="form-control" value="{{$movie->release_year}}" name="release_year"
+                                        <input type="text" class="form-control" value="{{$movie->release_year}}"
+                                               name="release_year"
                                                placeholder="Release year">
                                         @error('release_year')
                                         <div style="color: red">{{ $message }}</div>
@@ -92,7 +99,11 @@
                                     <div class="col-sm-6 form-group">
                                         <select name="language_id" class="form-control" id="exampleFormControlSelect3">
                                             @foreach($languages as $key => $language)
-                                                <option value="{{$language->id}}">{{$language->name}}</option>
+                                                <option
+                                                    @if($language->id == $movie->language_id)
+                                                    selected
+                                                    @endif
+                                                    value="{{$language->id}}">{{$language->name}}</option>
                                             @endforeach
                                         </select>
                                         @error('language_id')
@@ -101,7 +112,7 @@
                                     </div>
                                     <div class="col-12 form-group ">
                                         <button type="submit" class="btn btn-primary">Update</button>
-                                        <button type="reset" class="btn btn-danger">cancel</button>
+                                        <a href="{{route('movie.list')}}" class="btn btn-danger">cancel</a>
                                     </div>
                                 </div>
                             </form>
