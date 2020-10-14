@@ -32,7 +32,7 @@
                                             <td>{{++$key}}</td>
                                             <td>{{$user->name}}</td>
                                             <td>{{$user->email}}</td>
-                                            <td>No data</td>
+                                            <td>{{$user->role->name}}</td>
                                             <td>
                                                 <div>
                                                     <a class="iq-bg-success" data-placement="top" href="{{route('user.edit', $user->id)}}">Edit</a>

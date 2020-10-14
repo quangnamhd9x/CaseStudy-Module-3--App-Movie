@@ -20,7 +20,7 @@
                                         <div class="row">
                                             <div class="col-12 form-group">
                                                 <input type="text" name="name" class="form-control"
-                                                       placeholder="Language" value="{{ old('name') }}">
+                                                       placeholder="Role" value="{{ old('name') }}">
                                                 @error('title')
                                                 <div style="color: red">{{ $message }}</div>
                                                 @enderror

@@ -20,6 +20,7 @@ class Movie extends Model
         'quality_id',
         'language_id',
         'status',
+        'role_id',
     ];
 
 

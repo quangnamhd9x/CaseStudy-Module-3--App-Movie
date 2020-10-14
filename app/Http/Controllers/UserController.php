@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Language;
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -25,7 +28,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        $roles = Role::all();
+        return view('admin.user.add', compact('roles'));
     }
 
     /**
@@ -36,7 +40,10 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = new User();
+        $user->fill($request->all());
+        $user->save();
+        return redirect()->route('user.index');
     }
 
     /**
@@ -58,7 +65,10 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $users = User::all();
+        $roles = Role::all();
+        $user = User::findOrFail($id);
+        return view('admin.user.edit', compact('user', 'roles', 'users'));
     }
 
     /**
@@ -70,7 +80,10 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->fill($request->all());
+        $user->save();
+        return redirect()->route('user.index');
     }
 
     /**
@@ -81,6 +94,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->delete();
+        return redirect()->route('user.index');
     }
 }

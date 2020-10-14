@@ -59,7 +59,14 @@
                     <li class="active active-menu"><a href="{{route('admin.dashboard')}}" class="iq-waves-effect"><i class="las la-home iq-arrow-left"></i><span>Dashboard</span></a></li>
 {{--                    <li><a href="rating.html" class="iq-waves-effect"><i class="las la-star-half-alt"></i><span>Rating </span></a></li>--}}
 {{--                    <li><a href="comment.html" class="iq-waves-effect"><i class="las la-comments"></i><span>Comment</span></a></li>--}}
-                    <li><a href="{{route('user.index')}}" class="iq-waves-effect"><i class="las la-user-friends"></i><span style="color: white; font-size: 20px"><b>User</b></span></a></li>
+{{--                    <li><a href="{{route('user.index')}}" class="iq-waves-effect"><i class="las la-user-friends"></i><span style="color: white; font-size: 20px"><b>User</b></span></a></li>--}}
+                    <li>
+                        <a href="#user" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-film"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                        <ul id="user" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                            <li><a href="{{route('user.create')}}"><i class="las la-user-plus"></i>Add User</a></li>
+                            <li><a href="{{route('user.index')}}"><i class="las la-eye"></i>User List</a></li>
+                        </ul>
+                    </li>
                     <li>
                         <a href="#movie" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-film"></i><span>Movie</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                         <ul id="movie" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
@@ -179,8 +186,11 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="{{route('view.index')}}" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false">Movie Page</a>
-{{--                        <ul id="pages" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">--}}
+{{--                        <a href="{{route('view.index')}}" type="button" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false">Movie Page</a>--}}
+                        <a href="{{route('view.index')}}" class="iq-waves-effect"><i class="las la-user-friends"></i><span style="color: white; font-size: 20px"><b>Movie Page</b></span></a>
+
+
+                    {{--                        <ul id="pages" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">--}}
 {{--                            <li>--}}
 {{--                                <a href="#authentication" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-pages-line"></i><span>Authentication</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>--}}
 {{--                                <ul id="authentication" class="iq-submenu collapse" data-parent="#pages">--}}
@@ -250,10 +260,10 @@
                             </form>
                         </li>
                         <li class="nav-item nav-icon">
-                            <a href="#" class="search-toggle iq-waves-effect text-gray rounded">
-                                <i class="ri-notification-2-line"></i>
-                                <span class="bg-primary dots"></span>
-                            </a>
+{{--                            <a href="#" class="search-toggle iq-waves-effect text-gray rounded">--}}
+{{--                                <i class="ri-notification-2-line"></i>--}}
+{{--                                <span class="bg-primary dots"></span>--}}
+{{--                            </a>--}}
                             <div class="iq-sub-dropdown">
                                 <div class="iq-card shadow-none m-0">
                                     <div class="iq-card-body p-0">
@@ -313,10 +323,10 @@
                             </div>
                         </li>
                         <li class="nav-item nav-icon dropdown">
-                            <a href="#" class="search-toggle iq-waves-effect text-gray rounded">
-                                <i class="ri-mail-line"></i>
-                                <span class="bg-primary dots"></span>
-                            </a>
+{{--                            <a href="#" class="search-toggle iq-waves-effect text-gray rounded">--}}
+{{--                                <i class="ri-mail-line"></i>--}}
+{{--                                <span class="bg-primary dots"></span>--}}
+{{--                            </a>--}}
                             <div class="iq-sub-dropdown">
                                 <div class="iq-card shadow-none m-0">
                                     <div class="iq-card-body p-0 ">

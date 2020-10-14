@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/login', [LoginController::class, 'showLogin'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('admin.login');
+Route::post('/login', [LoginController::class, 'loginAdmin'])->name('admin.login');
 Route::get('logout', [LoginController::class, 'logout'])->name('admin.logout');
 
 Route::get('/register', [LoginController::class, 'register'])->name('admin.layout.register');
@@ -73,5 +74,14 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::get('/{id}/edit', [RoleController::class, 'edit'])->name('role.edit');
         Route::post('/{id}/edit', [RoleController::class, 'update'])->name('role.update');
         Route::get('/{id}/destroy', [RoleController::class, 'destroy'])->name('role.destroy');
+    });
+
+    Route::prefix('user')->group(function (){
+        Route::get('/', [UserController::class, 'index'])->name('user.index');
+        Route::get('/add', [UserController::class, 'create'])->name('user.create');
+        Route::post('/add', [UserController::class, 'store'])->name('user.store');
+        Route::get('/{id}/edit', [UserController::class, 'edit'])->name('user.edit');
+        Route::post('/{id}/edit', [UserController::class, 'update'])->name('user.update');
+        Route::get('/{id}/destroy', [UserController::class, 'destroy'])->name('user.destroy');
     });
 });
