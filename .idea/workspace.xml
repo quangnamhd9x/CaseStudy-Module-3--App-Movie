@@ -6,18 +6,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf2b9a90-5c05-476a-862c-0f3ee74efcbf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/user/add.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/user/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/LiveSearchController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/LiveSearchUserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/user/search.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/guest/resultSearch.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/guest/search.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/search/search.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Movie.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Movie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/layout/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/layout/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/role/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/role/add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/guest/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/guest/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/guest/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/guest/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/guest/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/guest/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -209,7 +217,10 @@
       <workItem from="1602570561460" duration="12283000" />
       <workItem from="1602600451387" duration="600000" />
       <workItem from="1602637316944" duration="30436000" />
-      <workItem from="1602680656207" duration="9302000" />
+      <workItem from="1602680656207" duration="12427000" />
+      <workItem from="1602716906158" duration="2223000" />
+      <workItem from="1602723062762" duration="15411000" />
+      <workItem from="1602751125005" duration="7544000" />
     </task>
     <servers />
   </component>
@@ -240,10 +251,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="665" y="355" width="905" height="403" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1602316790484" />
-    <state x="693" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602649816862">
+    <state x="693" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602754838397">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="693" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1602649816862" />
+    <state x="693" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1602754838397" />
     <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1602164556076">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -260,26 +271,33 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1874" height="275" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1602164556076" />
-    <state x="755" y="479" width="399" height="156" key="NewPhpFileDialog" timestamp="1602661551208">
+    <state x="726" y="273" width="457" height="568" key="NewPhpClassDialog" timestamp="1602717952347">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="755" y="479" width="399" height="156" key="NewPhpFileDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1602661551208" />
+    <state x="726" y="273" width="457" height="568" key="NewPhpClassDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1602717952347" />
+    <state x="755" y="479" width="399" height="156" key="NewPhpFileDialog" timestamp="1602755330238">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="755" y="479" width="399" height="156" key="NewPhpFileDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1602755330238" />
     <state x="449" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1602511103828">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="449" y="188" width="1022" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1602511103828" />
+    <state x="624" y="252" key="run.anything.popup" timestamp="1602728139655">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="624" y="252" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1602728139655" />
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1602727517689">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1602727517689" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/resources/views/index.blade.php</url>
-          <line>600</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/admin/layout/dashboard.blade.php</url>
-          <line>57</line>
+          <line>58</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>

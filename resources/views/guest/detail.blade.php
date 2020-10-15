@@ -19,15 +19,9 @@
                         <ul class="p-0 list-inline d-flex align-items-center movie-content">
                             <li class="text-white"></li>
                         </ul>
-{{--                        <div class="d-flex align-items-center text-white text-detail">--}}
-{{--                            <span class="badge badge-secondary p-3">13+</span>--}}
-{{--                            <span class="ml-3">3h 15m</span>--}}
-{{--                            <span class="trending-year">2020</span>--}}
-{{--                        </div>--}}
                         <div class="d-flex align-items-center series mb-4">
                             <a href="javascript:void();"><img src="images/trending/trending-label.png" class="img-fluid"
                                                               alt=""></a>
-{{--                            <span class="text-gold ml-3">#2 in Series Today</span>--}}
                         </div>
                         <p class="trending-dec w-100 mb-0">{{$movie->description}}</p>
                         <ul class="list-inline p-0 mt-4 share-icons music-play-lists">
@@ -54,151 +48,91 @@
                 <div class="row">
                     <div class="col-sm-12 overflow-hidden">
                         <div class="iq-main-header d-flex align-items-center justify-content-between">
+                            <h4 class="main-title">Comments</h4>
+                        </div>
+                        <div class="favorites-contens">
+                            <table class="table" style="border-radius: 15px; width: 800px">
+                                <thead class="thead-dark">
+                                <tr>
+                                    <th style="width: 200px" scope="col">Name</th>
+                                    <th scope="col">Comment</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Nam</td>
+                                    <td>Hay day</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="iq-favorites" class="s-margin">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 overflow-hidden">
+                        <div class="iq-main-header d-flex align-items-center justify-content-between">
+                            <h4 class="main-title">Add Comment</h4>
+                        </div>
+                        <div class="favorites-contens">
+                            <form>
+                            <table class="table" style="border-radius: 15px; width: 800px">
+                                <thead class="thead-dark">
+                                <tr>
+                                    <th style="width: 200px" scope="col">Name</th>
+                                    <th scope="col">Comment</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Nam</td>
+                                    <td><input type="text" style="width: 500px; height: 70px; border-radius: 10px; font-size: 20px">
+
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="iq-favorites" class="s-margin">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 overflow-hidden">
+                        <div class="iq-main-header d-flex align-items-center justify-content-between">
                             <h4 class="main-title">More Like This</h4>
                             <a href="movie-category.html" class="text-primary">View all</a>
                         </div>
                         <div class="favorites-contens">
-                            <ul class="list-inline favorites-slider row p-0 mb-0">
-                                <li class="slide-item">
-                                    <a href="movie-details.html">
-                                        <div class="block-images position-relative">
-                                            <div class="img-box">
-                                                <img src="images/movies/06.jpg" class="img-fluid" alt="">
-                                            </div>
-                                            <div class="block-description">
-                                                <h6>The Lost Journey</h6>
-                                                <div class="movie-time d-flex align-items-center my-2">
-                                                    <div class="badge badge-secondary p-1 mr-2">20+</div>
-                                                    <span class="text-white">2h 15m</span>
+                            <ul class="favorites-slider list-inline  row p-0 mb-0">
+                                @foreach($movies as $key => $movie)
+                                    <li class="slide-item">
+                                        <a href="{{route('view.detail',$movie->id)}}">
+                                            <div class="block-images position-relative">
+                                                <div class="img-box">
+                                                    <img src="{{$movie->getNameImage()}}" class="img-fluid" alt="">
                                                 </div>
-                                                <div class="hover-buttons">
-                                       <span class="btn btn-hover"><i class="fa fa-play mr-1" aria-hidden="true"></i>
-                                          Play
-                                          Now</span>
+                                                <div class="block-description">
+                                                    <h6>{{$movie->title}}</h6>
+                                                    <div class="hover-buttons">
+                                          <span class="btn btn-hover">
+                                          <i class="fa fa-play mr-1" aria-hidden="true"></i>
+                                          Play Now
+                                          </span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="block-social-info">
-                                                <ul class="list-inline p-0 m-0 music-play-lists">
-                                                    <li><span><i class="ri-volume-mute-fill"></i></span></li>
-                                                    <li><span><i class="ri-heart-fill"></i></span></li>
-                                                    <li><span><i class="ri-add-line"></i></span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="slide-item">
-                                    <a href="movie-details.html">
-                                        <div class="block-images position-relative">
-                                            <div class="img-box">
-                                                <img src="images/movies/07.jpg" class="img-fluid" alt="">
-                                            </div>
-                                            <div class="block-description">
-                                                <h6>Boop Bitty</h6>
-                                                <div class="movie-time d-flex align-items-center my-2">
-                                                    <div class="badge badge-secondary p-1 mr-2">11+</div>
-                                                    <span class="text-white">2h 30m</span>
-                                                </div>
-                                                <div class="hover-buttons">
-                                       <span class="btn btn-hover"><i class="fa fa-play mr-1" aria-hidden="true"></i>
-                                          Play
-                                          Now</span>
+                                                <div class="block-social-info">
                                                 </div>
                                             </div>
-                                            <div class="block-social-info">
-                                                <ul class="list-inline p-0 m-0 music-play-lists">
-                                                    <li><span><i class="ri-volume-mute-fill"></i></span></li>
-                                                    <li><span><i class="ri-heart-fill"></i></span></li>
-                                                    <li><span><i class="ri-add-line"></i></span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="slide-item">
-                                    <a href="movie-details.html">
-                                        <div class="block-images position-relative">
-                                            <div class="img-box">
-                                                <img src="images/movies/08.jpg" class="img-fluid" alt="">
-                                            </div>
-                                            <div class="block-description">
-                                                <h6>Unknown Land</h6>
-                                                <div class="movie-time d-flex align-items-center my-2">
-                                                    <div class="badge badge-secondary p-1 mr-2">17+</div>
-                                                    <span class="text-white">2h 30m</span>
-                                                </div>
-                                                <div class="hover-buttons">
-                                       <span class="btn btn-hover"><i class="fa fa-play mr-1" aria-hidden="true"></i>
-                                          Play
-                                          Now</span>
-                                                </div>
-                                            </div>
-                                            <div class="block-social-info">
-                                                <ul class="list-inline p-0 m-0 music-play-lists">
-                                                    <li><span><i class="ri-volume-mute-fill"></i></span></li>
-                                                    <li><span><i class="ri-heart-fill"></i></span></li>
-                                                    <li><span><i class="ri-add-line"></i></span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="slide-item">
-                                    <a href="movie-details.html">
-                                        <div class="block-images position-relative">
-                                            <div class="img-box">
-                                                <img src="images/movies/09.jpg" class="img-fluid" alt="">
-                                            </div>
-                                            <div class="block-description">
-                                                <h6>Blood Block</h6>
-                                                <div class="movie-time d-flex align-items-center my-2">
-                                                    <div class="badge badge-secondary p-1 mr-2">13+</div>
-                                                    <span class="text-white">2h 40m</span>
-                                                </div>
-                                                <div class="hover-buttons">
-                                       <span class="btn btn-hover"><i class="fa fa-play mr-1" aria-hidden="true"></i>
-                                          Play
-                                          Now</span>
-                                                </div>
-                                            </div>
-                                            <div class="block-social-info">
-                                                <ul class="list-inline p-0 m-0 music-play-lists">
-                                                    <li><span><i class="ri-volume-mute-fill"></i></span></li>
-                                                    <li><span><i class="ri-heart-fill"></i></span></li>
-                                                    <li><span><i class="ri-add-line"></i></span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="slide-item">
-                                    <a href="movie-details.html">
-                                        <div class="block-images position-relative">
-                                            <div class="img-box">
-                                                <img src="images/movies/10.jpg" class="img-fluid" alt="">
-                                            </div>
-                                            <div class="block-description">
-                                                <h6>Champions</h6>
-                                                <div class="movie-time d-flex align-items-center my-2">
-                                                    <div class="badge badge-secondary p-1 mr-2">13+</div>
-                                                    <span class="text-white">2h 30m</span>
-                                                </div>
-                                                <div class="hover-buttons">
-                                       <span class="btn btn-hover"><i class="fa fa-play mr-1" aria-hidden="true"></i>
-                                          Play
-                                          Now</span>
-                                                </div>
-                                            </div>
-                                            <div class="block-social-info">
-                                                <ul class="list-inline p-0 m-0 music-play-lists">
-                                                    <li><span><i class="ri-volume-mute-fill"></i></span></li>
-                                                    <li><span><i class="ri-heart-fill"></i></span></li>
-                                                    <li><span><i class="ri-add-line"></i></span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
+                                        </a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -214,151 +148,30 @@
                             <a href="movie-category.html" class="text-primary">View all</a>
                         </div>
                         <div class="upcoming-contens">
-                            <ul class="favorites-slider list-inline  row p-0 mb-0">
-                                <li class="slide-item">
-                                    <a href="movie-details.html">
-                                        <div class="block-images position-relative">
-                                            <div class="img-box">
-                                                <img src="images/upcoming/01.jpg" class="img-fluid" alt="">
-                                            </div>
-                                            <div class="block-description">
-                                                <h6>The Last Breath</h6>
-                                                <div class="movie-time d-flex align-items-center my-2">
-                                                    <div class="badge badge-secondary p-1 mr-2">5+</div>
-                                                    <span class="text-white">2h 30m</span>
-                                                </div>
-                                                <div class="hover-buttons">
-                                       <span class="btn btn-hover"><i class="fa fa-play mr-1" aria-hidden="true"></i>
+                            <ul class="favorites-slider list-inline row p-0 mb-0">
+                                @foreach($movies as $key => $movie)
+                                    @if($movie->status == 2)
+                                        <li class="slide-item 11111">
+                                            <a href="{{route('view.detail',$movie->id)}}">
+                                                <div class="block-images position-relative">
+                                                    <div class="img-box">
+                                                        <img src="{{$movie->getNameImage()}}" class="img-fluid" alt="">
+                                                    </div>
+                                                    <div class="block-description">
+                                                        <h6>{{$movie->title}}</h6>
+                                                        <div class="hover-buttons">
+                                          <span class="btn btn-hover"><i class="fa fa-play mr-1" aria-hidden="true"></i>
                                           Play Now
-                                       </span>
+                                          </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="block-social-info">
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="block-social-info">
-                                                <ul class="list-inline p-0 m-0 music-play-lists">
-                                                    <li><span><i class="ri-volume-mute-fill"></i></span></li>
-                                                    <li><span><i class="ri-heart-fill"></i></span></li>
-                                                    <li><span><i class="ri-add-line"></i></span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="slide-item">
-                                    <a href="movie-details.html">
-                                        <div class="block-images position-relative">
-                                            <div class="img-box">
-                                                <img src="images/upcoming/02.jpg" class="img-fluid" alt="">
-                                            </div>
-                                            <div class="block-description">
-                                                <h6>Last Night</h6>
-                                                <div class="movie-time d-flex align-items-center my-2">
-                                                    <div class="badge badge-secondary p-1 mr-2">22+</div>
-                                                    <span class="text-white">2h 15m</span>
-                                                </div>
-                                                <div class="hover-buttons">
-                                       <span class="btn btn-hover">
-                                          <i class="fa fa-play mr-1" aria-hidden="true"></i>
-                                          Play Now
-                                       </span>
-                                                </div>
-                                            </div>
-                                            <div class="block-social-info">
-                                                <ul class="list-inline p-0 m-0 music-play-lists">
-                                                    <li><span><i class="ri-volume-mute-fill"></i></span></li>
-                                                    <li><span><i class="ri-heart-fill"></i></span></li>
-                                                    <li><span><i class="ri-add-line"></i></span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="slide-item">
-                                    <a href="movie-details.html">
-                                        <div class="block-images position-relative">
-                                            <div class="img-box">
-                                                <img src="images/upcoming/03.jpg" class="img-fluid" alt="">
-                                            </div>
-                                            <div class="block-description">
-                                                <h6>1980</h6>
-                                                <div class="movie-time d-flex align-items-center my-2">
-                                                    <div class="badge badge-secondary p-1 mr-2">25+</div>
-                                                    <span class="text-white">3h</span>
-                                                </div>
-                                                <div class="hover-buttons">
-                                       <span class="btn btn-hover">
-                                          <i class="fa fa-play mr-1" aria-hidden="true"></i>
-                                          Play Now
-                                       </span>
-                                                </div>
-                                            </div>
-                                            <div class="block-social-info">
-                                                <ul class="list-inline p-0 m-0 music-play-lists">
-                                                    <li><span><i class="ri-volume-mute-fill"></i></span></li>
-                                                    <li><span><i class="ri-heart-fill"></i></span></li>
-                                                    <li><span><i class="ri-add-line"></i></span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="slide-item">
-                                    <a href="movie-details.html">
-                                        <div class="block-images position-relative">
-                                            <div class="img-box">
-                                                <img src="images/upcoming/04.jpg" class="img-fluid" alt="">
-                                            </div>
-                                            <div class="block-description">
-                                                <h6>Looters</h6>
-                                                <div class="movie-time d-flex align-items-center my-2">
-                                                    <div class="badge badge-secondary p-1 mr-2">11+</div>
-                                                    <span class="text-white">2h 45m</span>
-                                                </div>
-                                                <div class="hover-buttons">
-                                       <span class="btn btn-hover">
-                                          <i class="fa fa-play mr-1" aria-hidden="true"></i>
-                                          Play Now
-                                       </span>
-                                                </div>
-                                            </div>
-                                            <div class="block-social-info">
-                                                <ul class="list-inline p-0 m-0 music-play-lists">
-                                                    <li><span><i class="ri-volume-mute-fill"></i></span></li>
-                                                    <li><span><i class="ri-heart-fill"></i></span></li>
-                                                    <li><span><i class="ri-add-line"></i></span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="slide-item">
-                                    <a href="movie-details.html">
-                                        <div class="block-images position-relative">
-                                            <div class="img-box">
-                                                <img src="images/upcoming/05.jpg" class="img-fluid" alt="">
-                                            </div>
-                                            <div class="block-description">
-                                                <h6>Vugotronic</h6>
-                                                <div class="movie-time d-flex align-items-center my-2">
-                                                    <div class="badge badge-secondary p-1 mr-2">9+</div>
-                                                    <span class="text-white">2h 30m</span>
-                                                </div>
-                                                <div class="hover-buttons">
-                                       <span class="btn btn-hover">
-                                          <i class="fa fa-play mr-1" aria-hidden="true"></i>
-                                          Play Now
-                                       </span>
-                                                </div>
-                                            </div>
-                                            <div class="block-social-info">
-                                                <ul class="list-inline p-0 m-0 music-play-lists">
-                                                    <li><span><i class="ri-volume-mute-fill"></i></span></li>
-                                                    <li><span><i class="ri-heart-fill"></i></span></li>
-                                                    <li><span><i class="ri-add-line"></i></span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
+                                            </a>
+                                        </li>
+                                    @endif
+                                @endforeach
                             </ul>
                         </div>
                     </div>
