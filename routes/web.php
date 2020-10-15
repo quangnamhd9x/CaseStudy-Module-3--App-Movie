@@ -24,6 +24,7 @@ Route::get('/result', [LiveSearchController::class, 'search'])->name('guest.resu
 Route::get('/{id}/profile', [UserController::class, 'showProfile'])->name('guest.profile');
 Route::get('/{id}/editProfile', [ProfileController::class, 'edit'])->name('user.editProfile');
 Route::post('/{id}/editProfile', [ProfileController::class, 'update'])->name('user.updateProfile');
+Route::get('/listMovie', [MovieController::class, 'listMovie'])->name('guest.listMovie');
 
 Route::prefix('/')->group(function () {
     Route::get('/', [IndexController::class, 'showIndex'])->name('view.index');
