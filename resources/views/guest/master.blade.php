@@ -204,36 +204,6 @@
                                     </div>
                                 </li>
                                 <li class="nav-item nav-icon">
-{{--                                    <a href="#" class="iq-user-dropdown search-toggle p-0 d-flex align-items-center"--}}
-{{--                                       data-toggle="search-toggle">--}}
-{{--                                        <img src="index_resource/images/user/user.jpg" class="img-fluid avatar-40 rounded-circle" alt="user">--}}
-{{--                                    </a>--}}
-{{--                                    <div class="iq-sub-dropdown iq-user-dropdown">--}}
-{{--                                        <div class="iq-card shadow-none m-0">--}}
-{{--                                            <div class="iq-card-body p-0 pl-3 pr-3">--}}
-{{--                                                <a href="manage-profile.html" class="iq-sub-card setting-dropdown">--}}
-{{--                                                    <div class="media align-items-center">--}}
-{{--                                                        <div class="right-icon">--}}
-{{--                                                            <i class="ri-file-user-line text-primary"></i>--}}
-{{--                                                        </div>--}}
-{{--                                                        <danaiv class="media-body ml-3">--}}
-{{--                                                            <h6 class="mb-0 ">Manage Profile</h6>--}}
-{{--                                                        </danaiv>--}}
-{{--                                                    </div>--}}
-{{--                                                </a>--}}
-{{--                                                <a href="{{route('login')}}" class="iq-sub-card setting-dropdown">--}}
-{{--                                                    <div class="media align-items-center">--}}
-{{--                                                        <div class="right-icon">--}}
-{{--                                                            <i class="ri-logout-circle-line text-primary"></i>--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="media-body ml-3">--}}
-{{--                                                            <h6 class="mb-0 ">Logout</h6>--}}
-{{--                                                        </div>--}}
-{{--                                                    </div>--}}
-{{--                                                </a>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
                                 </li>
                             </ul>
                         </div>

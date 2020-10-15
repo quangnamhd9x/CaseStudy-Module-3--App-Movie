@@ -27,14 +27,6 @@
                                                     <td>{{$user->email}}</td>
                                                 </tr>
                                             </table>
-{{--                                            <label>Name</label>--}}
-{{--                                            <input type="text" value="{{$user->name}}" class="form-control mb-0" id="exampleInputl2"--}}
-{{--                                                   placeholder="Enter Your Name" autocomplete="off" required>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="form-group">--}}
-{{--                                            <label>Date of Birth</label>--}}
-{{--                                            <input type="text" class="form-control date-input basicFlatpickr mb-0" placeholder="Select Date" id="exampleInputPassword2"--}}
-{{--                                                   required>--}}
                                         </div>
                                         <div class="form-group d-flex flex-md-row flex-column">
                                         </div>

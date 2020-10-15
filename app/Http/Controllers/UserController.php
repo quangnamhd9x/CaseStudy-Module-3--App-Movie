@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
-use App\Models\Language;
 use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
