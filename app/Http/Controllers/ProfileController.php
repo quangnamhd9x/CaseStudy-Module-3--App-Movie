@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
-use App\Models\Language;
 use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class ProfileController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +15,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        return view('admin.user.list', compact('users'));
+        //
     }
 
     /**
@@ -28,8 +25,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        $roles = Role::all();
-        return view('admin.user.add', compact('roles'));
+        //
     }
 
     /**
@@ -43,7 +39,7 @@ class UserController extends Controller
         $user = new User();
         $user->fill($request->all());
         $user->save();
-        return redirect()->route('user.index');
+        return redirect()->route('guest.profile');
     }
 
     /**
@@ -68,7 +64,7 @@ class UserController extends Controller
         $users = User::all();
         $roles = Role::all();
         $user = User::findOrFail($id);
-        return view('admin.user.edit', compact('user', 'roles', 'users'));
+        return view('guest.editProfile', compact('user', 'roles', 'users'));
     }
 
     /**
@@ -83,7 +79,7 @@ class UserController extends Controller
         $user = User::findOrFail($id);
         $user->fill($request->all());
         $user->save();
-        return redirect()->route('user.index');
+        return redirect()->route('guest.profile', $user->id);
     }
 
     /**
@@ -94,23 +90,6 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        $user = User::findOrFail($id);
-        $user->delete();
-        return redirect()->route('user.index');
-    }
-
-    public function showProfile($id){
-        $user = User::findOrFail($id);
-        $user->save();
-        $users = User::all();
-        return view('guest.profile', compact('users', 'user'));
-    }
-
-    public function profile(Request $request, $id)
-    {
-        $user = User::findOrFail($id);
-        $user->fill($request->all());
-        $user->save();
-        return redirect()->route('view.index');
+        //
     }
 }
