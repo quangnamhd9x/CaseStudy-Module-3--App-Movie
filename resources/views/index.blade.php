@@ -393,6 +393,7 @@
         </div>
     </div>
 </section>
+@yield('content')
 <section id="iq-trending" class="s-margin">
     <footer class="mb-0">
         <div class="container-fluid">

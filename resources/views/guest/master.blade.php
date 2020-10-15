@@ -63,15 +63,6 @@
                                             <a href="#" class="search-toggle">
                                                 <i class="ri-search-line"></i>
                                             </a>
-                                            <div class="search-box iq-search-bar">
-                                                <form action="#" class="searchbox">
-                                                    <div class="form-group position-relative">
-                                                        <input type="text" class="text search-input font-size-12"
-                                                               placeholder="type here to search...">
-                                                        <i class="search-link ri-search-line"></i>
-                                                    </div>
-                                                </form>
-                                            </div>
                                         </li>
                                         <li class="nav-item nav-icon">
                                             <a href="#" class="search-toggle position-relative">
@@ -138,26 +129,6 @@
                                                                 </div>
                                                             </div>
                                                         </a>
-{{--                                                        <a href="setting.html" class="iq-sub-card setting-dropdown">--}}
-{{--                                                            <div class="media align-items-center">--}}
-{{--                                                                <div class="right-icon">--}}
-{{--                                                                    <i class="ri-settings-4-line text-primary"></i>--}}
-{{--                                                                </div>--}}
-{{--                                                                <div class="media-body ml-3">--}}
-{{--                                                                    <h6 class="mb-0 ">Settings</h6>--}}
-{{--                                                                </div>--}}
-{{--                                                            </div>--}}
-{{--                                                        </a>--}}
-{{--                                                        <a href="pricing-plan.html" class="iq-sub-card setting-dropdown">--}}
-{{--                                                            <div class="media align-items-center">--}}
-{{--                                                                <div class="right-icon">--}}
-{{--                                                                    <i class="ri-settings-4-line text-primary"></i>--}}
-{{--                                                                </div>--}}
-{{--                                                                <div class="media-body ml-3">--}}
-{{--                                                                    <h6 class="mb-0 ">Pricing Plan</h6>--}}
-{{--                                                                </div>--}}
-{{--                                                            </div>--}}
-{{--                                                        </a>--}}
                                                         <a href="{{route('login')}}" class="iq-sub-card setting-dropdown">
                                                             <div class="media align-items-center">
                                                                 <div class="right-icon">
@@ -178,20 +149,20 @@
                         </div>
                         <div class="navbar-right menu-right">
                             <ul class="d-flex align-items-center list-inline m-0">
-                                <li class="nav-item nav-icon">
-                                    <a href="#" class="search-toggle device-search">
-                                        <i class="ri-search-line"></i>
-                                    </a>
-                                    <div class="search-box iq-search-bar d-search">
-                                        <form action="#" class="searchbox">
-                                            <div class="form-group position-relative">
-                                                <input type="text" class="text search-input font-size-12"
-                                                       placeholder="type here to search...">
-                                                <i class="search-link ri-search-line"></i>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </li>
+{{--                                <li class="nav-item nav-icon">--}}
+{{--                                    <a href="#" class="search-toggle device-search">--}}
+{{--                                        <i class="ri-search-line"></i>--}}
+{{--                                    </a>--}}
+{{--                                    <div class="search-box iq-search-bar d-search">--}}
+{{--                                        <form action="#" class="searchbox">--}}
+{{--                                            <div class="form-group position-relative">--}}
+{{--                                                <input type="text" class="text search-input font-size-12"--}}
+{{--                                                       placeholder="type here to search...">--}}
+{{--                                                <i class="search-link ri-search-line"></i>--}}
+{{--                                            </div>--}}
+{{--                                        </form>--}}
+{{--                                    </div>--}}
+{{--                                </li>--}}
                                 <li class="nav-item nav-icon">
                                     <a href="#" class="search-toggle" data-toggle="search-toggle">
                                     </a>
@@ -233,36 +204,36 @@
                                     </div>
                                 </li>
                                 <li class="nav-item nav-icon">
-                                    <a href="#" class="iq-user-dropdown search-toggle p-0 d-flex align-items-center"
-                                       data-toggle="search-toggle">
-                                        <img src="index_resource/images/user/user.jpg" class="img-fluid avatar-40 rounded-circle" alt="user">
-                                    </a>
-                                    <div class="iq-sub-dropdown iq-user-dropdown">
-                                        <div class="iq-card shadow-none m-0">
-                                            <div class="iq-card-body p-0 pl-3 pr-3">
-                                                <a href="manage-profile.html" class="iq-sub-card setting-dropdown">
-                                                    <div class="media align-items-center">
-                                                        <div class="right-icon">
-                                                            <i class="ri-file-user-line text-primary"></i>
-                                                        </div>
-                                                        <danaiv class="media-body ml-3">
-                                                            <h6 class="mb-0 ">Manage Profile</h6>
-                                                        </danaiv>
-                                                    </div>
-                                                </a>
-                                                <a href="{{route('login')}}" class="iq-sub-card setting-dropdown">
-                                                    <div class="media align-items-center">
-                                                        <div class="right-icon">
-                                                            <i class="ri-logout-circle-line text-primary"></i>
-                                                        </div>
-                                                        <div class="media-body ml-3">
-                                                            <h6 class="mb-0 ">Logout</h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
+{{--                                    <a href="#" class="iq-user-dropdown search-toggle p-0 d-flex align-items-center"--}}
+{{--                                       data-toggle="search-toggle">--}}
+{{--                                        <img src="index_resource/images/user/user.jpg" class="img-fluid avatar-40 rounded-circle" alt="user">--}}
+{{--                                    </a>--}}
+{{--                                    <div class="iq-sub-dropdown iq-user-dropdown">--}}
+{{--                                        <div class="iq-card shadow-none m-0">--}}
+{{--                                            <div class="iq-card-body p-0 pl-3 pr-3">--}}
+{{--                                                <a href="manage-profile.html" class="iq-sub-card setting-dropdown">--}}
+{{--                                                    <div class="media align-items-center">--}}
+{{--                                                        <div class="right-icon">--}}
+{{--                                                            <i class="ri-file-user-line text-primary"></i>--}}
+{{--                                                        </div>--}}
+{{--                                                        <danaiv class="media-body ml-3">--}}
+{{--                                                            <h6 class="mb-0 ">Manage Profile</h6>--}}
+{{--                                                        </danaiv>--}}
+{{--                                                    </div>--}}
+{{--                                                </a>--}}
+{{--                                                <a href="{{route('login')}}" class="iq-sub-card setting-dropdown">--}}
+{{--                                                    <div class="media align-items-center">--}}
+{{--                                                        <div class="right-icon">--}}
+{{--                                                            <i class="ri-logout-circle-line text-primary"></i>--}}
+{{--                                                        </div>--}}
+{{--                                                        <div class="media-body ml-3">--}}
+{{--                                                            <h6 class="mb-0 ">Logout</h6>--}}
+{{--                                                        </div>--}}
+{{--                                                    </div>--}}
+{{--                                                </a>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
                                 </li>
                             </ul>
                         </div>
