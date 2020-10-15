@@ -30,7 +30,7 @@
                                                 <label id="gallery2" for="form_gallery-upload">Upload Image</label>
                                                 <input data-name="#gallery2" name="image" id="form_gallery-upload"
                                                        class="form_gallery-upload"
-                                                       type="file" accept=".png, .jpg, .jpeg" value="">
+                                                       type="file" accept=".png, .jpg, .jpeg" value="{{$movie->image}}">
                                                 @error('image')
                                                 <div style="color: red">{{ $message }}</div>
                                                 @enderror

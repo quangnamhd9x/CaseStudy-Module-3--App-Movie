@@ -121,8 +121,7 @@
                                         <div class="iq-card shadow-none m-0">
                                             <div class="iq-card-body p-0 pl-3 pr-3">
                                                 @if(\Illuminate\Support\Facades\Auth::check())
-                                                    {{\Illuminate\Support\Facades\Auth::user()->name}}
-                                                <br>
+                                                    {{\Illuminate\Support\Facades\Auth::user()->name}}<br>
                                                     {{\Illuminate\Support\Facades\Auth::user()->email}}
                                                             @foreach($users as $user)
                                                         <a href="{{route('guest.profile', \Illuminate\Support\Facades\Auth::user()->id)}}"
@@ -137,6 +136,18 @@
                                                                 </div>
                                                             </div>
                                                         </a>
+                                                    @if(\Illuminate\Support\Facades\Auth::user()->role_id == 2)
+                                                            <a href="{{route('admin.dashboard')}}"
+                                                               class="iq-sub-card setting-dropdown">
+                                                                <div class="media align-items-center">
+                                                                    <div class="right-icon">
+                                                                        <i class="ri-logout-circle-line text-primary"></i>
+                                                                    </div>
+                                                                    <div class="media-body ml-3">
+                                                                        <h6 class="mb-0 ">Admin Page</h6>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
                                                         <a href="{{route('admin.logout')}}"
                                                            class="iq-sub-card setting-dropdown">
                                                             <div class="media align-items-center">
@@ -148,6 +159,19 @@
                                                                 </div>
                                                             </div>
                                                         </a>
+                                                        @else
+                                                            <a href="{{route('admin.logout')}}"
+                                                               class="iq-sub-card setting-dropdown">
+                                                                <div class="media align-items-center">
+                                                                    <div class="right-icon">
+                                                                        <i class="ri-logout-circle-line text-primary"></i>
+                                                                    </div>
+                                                                    <div class="media-body ml-3">
+                                                                        <h6 class="mb-0 ">Logout</h6>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        @endif
                                                         @else
                                                             <a href="{{route('login')}}"
                                                                class="iq-sub-card setting-dropdown">
@@ -393,7 +417,6 @@
         </div>
     </div>
 </section>
-@yield('content')
 <section id="iq-trending" class="s-margin">
     <footer class="mb-0">
         <div class="container-fluid">

@@ -8,8 +8,6 @@ use App\Models\Language;
 use App\Models\Movie;
 use App\Models\Quality;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Storage;
 
 class MovieController extends Controller
 {
