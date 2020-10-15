@@ -75,4 +75,11 @@ class MovieController extends Controller
         $movie->delete();
         return redirect()->route('movie.list');
     }
+
+    public function listMovie(){
+        $movies = Movie::all();
+        $categories = Category::all();
+        $languages = Language::all();
+        return view('guest.listMovie', compact('movies', 'categories', 'languages'));
+    }
 }

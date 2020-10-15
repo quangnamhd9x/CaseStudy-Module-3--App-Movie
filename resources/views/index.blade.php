@@ -193,12 +193,6 @@
                                     data-delay-in="0.6">{{$movie->title}}</h1>
                                 <p data-animation-in="fadeInUp" data-delay-in="1.2">{{$movie->description}}
                                 </p>
-                                <div class="d-flex align-items-center r-mb-23" data-animation-in="fadeInUp"
-                                     data-delay-in="1.2">
-                                    <a href="" class="btn btn-hover"><i class="fa fa-play mr-2"
-                                                                        aria-hidden="true"></i>Play Now</a>
-                                    <a href="" class="btn btn-link">More details</a>
-                                </div>
                             </div>
                         </div>
                         <div class="trailor-video">
@@ -238,7 +232,7 @@
                 <div class="col-sm-12 overflow-hidden">
                     <div class="iq-main-header d-flex align-items-center justify-content-between">
                         <h4 class="main-title">All Movie</h4>
-                        <a href="movie-category.html" class="text-primary">View all</a>
+                        <a href="{{route('guest.listMovie')}}" class="text-primary">View all</a>
                     </div>
                     <div class="favorites-contens">
                         <ul class="favorites-slider list-inline  row p-0 mb-0">
@@ -276,7 +270,6 @@
                 <div class="col-sm-12 overflow-hidden">
                     <div class="iq-main-header d-flex align-items-center justify-content-between">
                         <h4 class="main-title">Your Favorites</h4>
-                        <a href="movie-category.html" class="text-primary">View all</a>
                     </div>
                     <div class="favorites-contens">
                         <ul class="favorites-slider list-inline  row p-0 mb-0">
@@ -316,7 +309,6 @@
                 <div class="col-sm-12 overflow-hidden">
                     <div class="iq-main-header d-flex align-items-center justify-content-between">
                         <h4 class="main-title">Upcoming Movies</h4>
-                        <a href="movie-category.html" class="text-primary">View all</a>
                     </div>
                     <div class="upcoming-contens">
                         <ul class="favorites-slider list-inline row p-0 mb-0">
@@ -401,6 +393,7 @@
         </div>
     </div>
 </section>
+@yield('content')
 <section id="iq-trending" class="s-margin">
     <footer class="mb-0">
         <div class="container-fluid">
