@@ -98,4 +98,12 @@ class UserController extends Controller
         $user->delete();
         return redirect()->route('user.index');
     }
+
+    public function showProfile(Request $request, $id){
+        $user = User::findOrFail($id);
+        $user->fill($request->all());
+        $user->save();
+        $users = User::all();
+        return view('guest.profile', compact('users', 'user'));
+    }
 }

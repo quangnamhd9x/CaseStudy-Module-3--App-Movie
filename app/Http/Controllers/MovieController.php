@@ -47,11 +47,12 @@ class MovieController extends Controller
     }
 
     public function showDetail($id){
+        $movies = Movie::all();
         $movie = Movie::findOrFail($id);
         $categories = Category::all();
         $languages = Language::all();
         $qualities = Quality::all();
-        return view('admin.movie.detail', compact('movie', 'categories', 'languages', 'qualities'));
+        return view('admin.movie.detail', compact('movie', 'categories', 'languages', 'qualities', 'movies'));
     }
 
     public function edit($id){

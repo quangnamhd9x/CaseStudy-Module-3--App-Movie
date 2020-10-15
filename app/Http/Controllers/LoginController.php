@@ -18,24 +18,9 @@ class LoginController extends Controller
         $user = [
             'email' => $request->email,
             'password' => $request->password,
-            'role_id' => $request->role_id = 1,
         ];
 
         if (!Auth::attempt($user)){
-            return redirect()->route('login');
-        } else {
-            return redirect()->route('view.index');
-        }
-    }
-
-    public function loginAdmin(Request $request){
-        $admin = [
-            'email' => $request->email,
-            'password' => $request->password,
-            'role_id' => $request->role_id = 2,
-        ];
-
-        if (!Auth::attempt($admin)){
             return redirect()->route('login');
         } else {
             return redirect()->route('admin.dashboard');

@@ -3,6 +3,7 @@
 
 <!-- Mirrored from iqonic.design/themes/streamitnew/dashboard/html/theme/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Sep 2020 07:03:49 GMT -->
 <head>
+    @can('crud-user')
     <style>
         .body {
             background-color: white;
@@ -474,6 +475,7 @@
 <!-- Custom JavaScript -->
 <script src="admin_resource/assets/js/custom.js"></script>
 </body>
+@endcan
 
 <!-- Mirrored from iqonic.design/themes/streamitnew/dashboard/html/theme/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Sep 2020 07:05:14 GMT -->
 </html>

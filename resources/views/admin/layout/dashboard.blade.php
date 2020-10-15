@@ -2,6 +2,7 @@
 
 @section('content')
     <div id="content-page" class="content-page">
+
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12">
@@ -117,7 +118,6 @@
                                             <td colspan="7">No Data</td>
                                         </tr>
                                     @endforelse
-
                                     </tbody>
                                 </table>
                             </div>
