@@ -89,34 +89,6 @@
                                                      class="img-fluid avatar-40 rounded-circle"
                                                      alt="user">
                                             </a>
-                                            <div class="iq-sub-dropdown iq-user-dropdown">
-                                                <div class="iq-card shadow-none m-0">
-                                                    <div class="iq-card-body p-0 pl-3 pr-3">
-                                                        <a href="{{route('guest.profile')}}"
-                                                           class="iq-sub-card setting-dropdown">
-                                                            <div class="media align-items-center">
-                                                                <div class="right-icon">
-                                                                    <i class="ri-file-user-line text-primary"></i>
-                                                                </div>
-                                                                <div class="media-body ml-3">
-                                                                    <h6 class="mb-0 ">Manage Profile</h6>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                        <a href="{{route('login')}}"
-                                                           class="iq-sub-card setting-dropdown">
-                                                            <div class="media align-items-center">
-                                                                <div class="right-icon">
-                                                                    <i class="ri-logout-circle-line text-primary"></i>
-                                                                </div>
-                                                                <div class="media-body ml-3">
-                                                                    <h6 class="mb-0">Logout</h6>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </li>
                                     </ul>
                                 </div>
@@ -148,43 +120,47 @@
                                     <div class="iq-sub-dropdown iq-user-dropdown">
                                         <div class="iq-card shadow-none m-0">
                                             <div class="iq-card-body p-0 pl-3 pr-3">
-                                                <a href="" class="iq-sub-card setting-dropdown">
-                                                    <div class="media align-items-center">
-                                                        <div class="right-icon">
-                                                            <i class="ri-file-user-line text-primary"></i>
-                                                        </div>
-                                                        <div class="media-body ml-3">
-                                                            <h6 class="mb-0 ">Manage Profile</h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
                                                 @if(\Illuminate\Support\Facades\Auth::check())
+                                                    {{\Illuminate\Support\Facades\Auth::user()->name}}
+                                                <br>
                                                     {{\Illuminate\Support\Facades\Auth::user()->email}}
-                                                    <a href="{{route('admin.logout')}}" class="iq-sub-card setting-dropdown">
-                                                        <div class="media align-items-center">
-                                                            <div class="right-icon">
-                                                                <i class="ri-logout-circle-line text-primary"></i>
+                                                            @foreach($users as $user)
+                                                        <a href="{{route('guest.profile', \Illuminate\Support\Facades\Auth::user()->id)}}"
+                                                            @endforeach
+                                                           class="iq-sub-card setting-dropdown">
+                                                            <div class="media align-items-center">
+                                                                <div class="right-icon">
+                                                                    <i class="ri-file-user-line text-primary"></i>
+                                                                </div>
+                                                                <div class="media-body ml-3">
+                                                                    <h6 class="mb-0 ">Manage Profile</h6>
+                                                                </div>
                                                             </div>
-                                                            <div class="media-body ml-3">
-                                                                <h6 class="mb-0 ">Logout</h6>
+                                                        </a>
+                                                        <a href="{{route('admin.logout')}}"
+                                                           class="iq-sub-card setting-dropdown">
+                                                            <div class="media align-items-center">
+                                                                <div class="right-icon">
+                                                                    <i class="ri-logout-circle-line text-primary"></i>
+                                                                </div>
+                                                                <div class="media-body ml-3">
+                                                                    <h6 class="mb-0 ">Logout</h6>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    </a>
-                                                @else
-                                                    <a href="{{route('login')}}" class="iq-sub-card setting-dropdown">
-                                                        <div class="media align-items-center">
-                                                            <div class="right-icon">
-                                                                <i class="ri-logout-circle-line text-primary"></i>
-                                                            </div>
-                                                            <div class="media-body ml-3">
-                                                                <h6 class="mb-0 ">Log in</h6>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                @endif
-
-
-
+                                                        </a>
+                                                        @else
+                                                            <a href="{{route('login')}}"
+                                                               class="iq-sub-card setting-dropdown">
+                                                                <div class="media align-items-center">
+                                                                    <div class="right-icon">
+                                                                        <i class="ri-logout-circle-line text-primary"></i>
+                                                                    </div>
+                                                                    <div class="media-body ml-3">
+                                                                        <h6 class="mb-0 ">Log in</h6>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        @endif
                                             </div>
                                         </div>
                                     </div>

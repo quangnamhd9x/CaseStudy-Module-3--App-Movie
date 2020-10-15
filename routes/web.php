@@ -2,13 +2,12 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\LiveSearchController;
-use App\Http\Controllers\LiveSearchUserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\QualityController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
@@ -22,7 +21,9 @@ Route::post('/register', [LoginController::class, 'postRegister']);
 Route::get('/search', [LiveSearchController::class, 'index']);
 Route::get('/searchInfo', [LiveSearchController::class, 'search']);
 Route::get('/result', [LiveSearchController::class, 'search'])->name('guest.resultSearch');
-Route::get('/profile', [UserController::class, 'showProfile'])->name('guest.profile');
+Route::get('/{id}/profile', [UserController::class, 'showProfile'])->name('guest.profile');
+Route::get('/{id}/editProfile', [ProfileController::class, 'edit'])->name('user.editProfile');
+Route::post('/{id}/editProfile', [ProfileController::class, 'update'])->name('user.updateProfile');
 
 Route::prefix('/')->group(function () {
     Route::get('/', [IndexController::class, 'showIndex'])->name('view.index');
