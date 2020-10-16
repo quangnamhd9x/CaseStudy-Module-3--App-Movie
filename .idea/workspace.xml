@@ -7,19 +7,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cf2b9a90-5c05-476a-862c-0f3ee74efcbf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LanguageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LanguageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LiveSearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LiveSearchController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/movie/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/movie/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/search.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/guest/editProfile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/guest/editProfile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/guest/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/guest/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/guest/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/guest/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/guest/resultSearch.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/guest/resultSearch.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/guest/search.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layout/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +156,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/index_resource/images/user" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -214,7 +203,9 @@
       <workItem from="1602716906158" duration="2223000" />
       <workItem from="1602723062762" duration="15411000" />
       <workItem from="1602751125005" duration="7544000" />
-      <workItem from="1602766387999" duration="11179000" />
+      <workItem from="1602766387999" duration="12184000" />
+      <workItem from="1602810977104" duration="2850000" />
+      <workItem from="1602817702774" duration="1161000" />
     </task>
     <servers />
   </component>
@@ -249,6 +240,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="693" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1602771108903" />
+    <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1602814117278">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1602814117278" />
     <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1602164556076">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
