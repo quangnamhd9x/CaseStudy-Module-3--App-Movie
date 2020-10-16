@@ -35,6 +35,11 @@
                     <div class="sign-in-page-data">
                         <div class="sign-in-from w-100 m-auto">
                             <h3 class="mb-3 text-center">Sign in</h3>
+                            @if(session('messageError'))
+                                <div style="color: red" class="alert alert-danger">
+                                    {{session('messageError')}}
+                                </div>
+                            @endif
                             <form class="mt-4" method="post">
                                 @csrf
                                 <div class="form-group">
@@ -58,7 +63,7 @@
                             Don't have an account? <a href="{{route('admin.layout.register')}}" class="text-primary ml-2">Sign Up</a>
                         </div>
                         <div class="d-flex justify-content-center links">
-                            <a href="pages-recoverpw.html" class="f-link">Forgot your password?</a>
+{{--                            <a href="pages-recoverpw.html" class="f-link">Forgot your password?</a>--}}
                         </div>
                     </div>
                 </div>

@@ -20,7 +20,7 @@ class LoginController extends Controller
         ];
 
         if (!Auth::attempt($user)){
-            return redirect()->route('login');
+            return redirect()->route('login')->with('messageError', 'Email or Password is correct!');
         } else {
             return redirect()->route('admin.dashboard');
         }

@@ -42,7 +42,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::get('/{id}/destroy', [MovieController::class, 'destroy'])->name('movie.destroy');
         Route::get('/{id}/detail', [MovieController::class, 'showDetail'])->name('movie.showDetail');
     });
-    Route::prefix('user')->group(function (){
+    Route::prefix('user')->group(function () {
         Route::get('/', [UserController::class, 'index'])->name('user.index');
         Route::get('/add', [UserController::class, 'create'])->name('user.create');
         Route::post('/add', [UserController::class, 'store'])->name('user.store');
@@ -50,7 +50,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::post('/{id}/edit', [UserController::class, 'update'])->name('user.update');
         Route::get('/{id}/destroy', [UserController::class, 'destroy'])->name('user.destroy');
     });
-    Route::prefix('category')->group(function (){
+    Route::prefix('category')->group(function () {
         Route::get('/', [CategoryController::class, 'index'])->name('category.index');
         Route::get('/add', [CategoryController::class, 'create'])->name('category.create');
         Route::post('/add', [CategoryController::class, 'store'])->name('category.store');
@@ -58,7 +58,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::post('/{id}/edit', [CategoryController::class, 'update'])->name('category.update');
         Route::get('/{id}/destroy', [CategoryController::class, 'destroy'])->name('category.destroy');
     });
-    Route::prefix('language')->group(function (){
+    Route::prefix('language')->group(function () {
         Route::get('/', [LanguageController::class, 'index'])->name('language.index');
         Route::get('/add', [LanguageController::class, 'create'])->name('language.create');
         Route::post('/add', [LanguageController::class, 'store'])->name('language.store');
@@ -66,15 +66,16 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::post('/{id}/edit', [LanguageController::class, 'update'])->name('language.update');
         Route::get('/{id}/destroy', [LanguageController::class, 'destroy'])->name('language.destroy');
     });
-    Route::prefix('quality')->group(function (){
+    Route::prefix('quality')->group(function () {
         Route::get('/', [QualityController::class, 'index'])->name('quality.index');
         Route::get('/add', [QualityController::class, 'create'])->name('quality.create');
         Route::post('/add', [QualityController::class, 'store'])->name('quality.store');
         Route::get('/{id}/edit', [QualityController::class, 'edit'])->name('quality.edit');
         Route::post('/{id}/edit', [QualityController::class, 'update'])->name('quality.update');
         Route::get('/{id}/destroy', [QualityController::class, 'destroy'])->name('quality.destroy');
+
     });
-    Route::prefix('role')->group(function (){
+    Route::prefix('role')->group(function () {
         Route::get('/', [RoleController::class, 'index'])->name('role.index');
         Route::get('/add', [RoleController::class, 'create'])->name('role.create');
         Route::post('/add', [RoleController::class, 'store'])->name('role.store');
@@ -83,7 +84,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::get('/{id}/destroy', [RoleController::class, 'destroy'])->name('role.destroy');
     });
 
-    Route::prefix('user')->group(function (){
+    Route::prefix('user')->group(function () {
         Route::get('/', [UserController::class, 'index'])->name('user.index');
         Route::get('/add', [UserController::class, 'create'])->name('user.create');
         Route::post('/add', [UserController::class, 'store'])->name('user.store');
