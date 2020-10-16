@@ -106,22 +106,10 @@
                     <li>
                         <a href="#comment" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-film"></i><span>Comment</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                         <ul id="comment" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                            <li><a href="{{route('movie.create')}}"><i class="las la-user-plus"></i>Show Comments</a></li>
+                            <li><a href="{{route('view.index')}}"><i class="las la-user-plus"></i>Show Comments</a></li>
                         </ul>
                     </li>
-{{--                    <li>--}}
-{{--                        <a href="#show" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i--}}
-{{--                                class="las la-film"></i><span>Show</span><i--}}
-{{--                                class="ri-arrow-right-s-line iq-arrow-right"></i>--}}
-{{--                        </a>--}}
-{{--                        <ul id="show" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">--}}
-{{--                            <li><a href="add-show.html"><i class="las la-user-plus"></i>Add Show</a></li>--}}
-{{--                            <li><a href="show-list.html"><i class="las la-eye"></i>Show List</a></li>--}}
-{{--                        </ul>--}}
-{{--                    </li>--}}
-{{--                    <li><a href="pages-pricing.html" class="iq-waves-effect"><i class="ri-price-tag-line"></i><span>Pricing</span></a></li>--}}
                     <li>
-{{--                        <a href="#ui-elements" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="lab la-elementor iq-arrow-left"></i><span>UI Elements</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>--}}
                         <ul id="ui-elements" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                             <li class="elements">
                                 <a href="#sub-menu" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-play-circle-line"></i><span>UI Kit</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
@@ -187,37 +175,7 @@
                         </ul>
                     </li>
                     <li>
-{{--                        <a href="{{route('view.index')}}" type="button" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false">Movie Page</a>--}}
                         <a href="{{route('view.index')}}" class="iq-waves-effect"><i class="las la-user-friends"></i><span style="color: white; font-size: 20px"><b>Movie Page</b></span></a>
-
-
-                    {{--                        <ul id="pages" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">--}}
-{{--                            <li>--}}
-{{--                                <a href="#authentication" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-pages-line"></i><span>Authentication</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>--}}
-{{--                                <ul id="authentication" class="iq-submenu collapse" data-parent="#pages">--}}
-{{--                                    <li><a href="sign-in.html"><i class="las la-sign-in-alt"></i>Login</a></li>--}}
-{{--                                    <li><a href="sign-up.html"><i class="ri-login-circle-line"></i>Register</a></li>--}}
-{{--                                    <li><a href="pages-recoverpw.html"><i class="ri-record-mail-line"></i>Recover Password</a></li>--}}
-{{--                                    <li><a href="pages-confirm-mail.html"><i class="ri-file-code-line"></i>Confirm Mail</a></li>--}}
-{{--                                    <li><a href="pages-lock-screen.html"><i class="ri-lock-line"></i>Lock Screen</a></li>--}}
-{{--                                </ul>--}}
-{{--                            </li>--}}
-{{--                            <li>--}}
-{{--                                <a href="#extra-pages" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-pantone-line"></i><span>Extra Pages</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>--}}
-{{--                                <ul id="extra-pages" class="iq-submenu collapse" data-parent="#pages">--}}
-{{--                                    <li><a href="pages-timeline.html"><i class="ri-map-pin-time-line"></i>Timeline</a></li>--}}
-{{--                                    <li><a href="pages-invoice.html"><i class="ri-question-answer-line"></i>Invoice</a></li>--}}
-{{--                                    <li><a href="blank-page.html"><i class="ri-invision-line"></i>Blank Page</a></li>--}}
-{{--                                    <li><a href="pages-error.html"><i class="ri-error-warning-line"></i>Error 404</a></li>--}}
-{{--                                    <li><a href="pages-error-500.html"><i class="ri-error-warning-line"></i>Error 500</a></li>--}}
-
-{{--                                    <li><a href="pages-pricing-one.html"><i class="ri-price-tag-2-line"></i>Pricing 1</a></li>--}}
-{{--                                    <li><a href="pages-maintenance.html"><i class="ri-archive-line"></i>Maintenance</a></li>--}}
-{{--                                    <li><a href="pages-comingsoon.html"><i class="ri-mastercard-line"></i>Coming Soon</a></li>--}}
-{{--                                    <li><a href="pages-faq.html"><i class="ri-compasses-line"></i>Faq</a></li>--}}
-{{--                                </ul>--}}
-{{--                            </li>--}}
-{{--                        </ul>--}}
                     </li>
                 </ul>
             </nav>
@@ -261,10 +219,6 @@
                             </form>
                         </li>
                         <li class="nav-item nav-icon">
-{{--                            <a href="#" class="search-toggle iq-waves-effect text-gray rounded">--}}
-{{--                                <i class="ri-notification-2-line"></i>--}}
-{{--                                <span class="bg-primary dots"></span>--}}
-{{--                            </a>--}}
                             <div class="iq-sub-dropdown">
                                 <div class="iq-card shadow-none m-0">
                                     <div class="iq-card-body p-0">
@@ -324,10 +278,6 @@
                             </div>
                         </li>
                         <li class="nav-item nav-icon dropdown">
-{{--                            <a href="#" class="search-toggle iq-waves-effect text-gray rounded">--}}
-{{--                                <i class="ri-mail-line"></i>--}}
-{{--                                <span class="bg-primary dots"></span>--}}
-{{--                            </a>--}}
                             <div class="iq-sub-dropdown">
                                 <div class="iq-card shadow-none m-0">
                                     <div class="iq-card-body p-0 ">
@@ -401,12 +351,8 @@
                                 <div class="iq-card shadow-none m-0">
                                     <div class="iq-card-body p-0 ">
                                         <div class="bg-primary p-3">
-{{--                                            @foreach($users as $key => $user)--}}
-{{--                                                @if($user->role_id == 1)--}}
                                             <h5 class="mb-0 text-white line-height">Hello</h5>
                                             <span class="text-white font-size-12">Available</span>
-{{--                                                @endif--}}
-{{--                                            @endforeach--}}
                                         </div>
                                         <div class="d-inline-block w-100 text-center p-3">
                                             <a class="bg-primary iq-sign-btn" href="{{route('admin.logout')}}" role="button">Sign out<i class="ri-login-box-line ml-2"></i></a>
