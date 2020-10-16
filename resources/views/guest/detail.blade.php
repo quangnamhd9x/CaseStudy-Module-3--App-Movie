@@ -51,7 +51,7 @@
                             <h4 class="main-title">Comments</h4>
                         </div>
                         <div class="favorites-contens">
-                            <table class="table" style="border-radius: 15px; width: 800px">
+                            <table class="table" style="border-radius: 15px; width: 500px">
                                 <thead class="thead-dark">
                                 <tr>
                                     <th style="width: 200px" scope="col">Name</th>
@@ -59,10 +59,16 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                                @foreach($comments as $comment)
                                 <tr>
-                                    <td>Nam</td>
-                                    <td>Hay day</td>
+                                    <td>
+                                        <label for="">{{\Illuminate\Support\Facades\Auth::user()->name}}</label>
+                                    </td>
+                                    <td>
+                                        <i style="color: wheat">comment:</i> <b>{{$comment->desc}}</b>
+                                    </td>
                                 </tr>
+                                @endforeach
                                 </tbody>
                             </table>
                         </div>
@@ -78,22 +84,15 @@
                             <h4 class="main-title">Add Comment</h4>
                         </div>
                         <div class="favorites-contens">
-                            <form>
-                            <table class="table" style="border-radius: 15px; width: 800px">
-                                <thead class="thead-dark">
+                            <form method="post" action="{{route('store.comment')}}">
+                                @csrf
+                            <table class="table" style="border-radius: 15px; width: 600px">
                                 <tr>
-                                    <th style="width: 200px" scope="col">Name</th>
-                                    <th scope="col">Comment</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>Nam</td>
-                                    <td><input type="text" style="width: 500px; height: 70px; border-radius: 10px; font-size: 20px">
-
+                                    <td><input name="desc" type="text" style="width: 600px; height: 70px; border-radius: 10px; font-size: 20px">
+                                        <button style="border-radius: 10px" class="btn btn-info" type="submit">Submit</button>
+                                        <input name="movie_id" value="{{$movies[0]->id}}" hidden>
                                     </td>
                                 </tr>
-                                </tbody>
                             </table>
                             </form>
                         </div>

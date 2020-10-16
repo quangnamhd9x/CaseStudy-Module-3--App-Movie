@@ -29,6 +29,7 @@ Route::get('/listMovie', [MovieController::class, 'listMovie'])->name('guest.lis
 Route::prefix('/')->group(function () {
     Route::get('/', [IndexController::class, 'showIndex'])->name('view.index');
     Route::get('/{id}/detail', [IndexController::class, 'showDetail'])->name('view.detail');
+    Route::post('/comment',[\App\Http\Controllers\CommentController::class,'storeComment'])->name('store.comment');
 });
 
 Route::middleware('auth')->prefix('admin')->group(function () {

@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Comment;
 use App\Models\Language;
 use App\Models\Movie;
 use App\Models\Quality;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 
 class IndexController extends Controller
@@ -29,7 +31,9 @@ class IndexController extends Controller
         $categories = Category::all();
         $languages = Language::all();
         $qualities = Quality::all();
-        return view('guest.detail', compact('movie', 'categories', 'languages', 'qualities', 'movies'));
+
+        $comments = Comment::all()->where('user_id','=',Auth::user()->id);
+        return view('guest.detail', compact('movie', 'categories', 'languages', 'qualities', 'movies','comments'));
     }
 
     public function detail(Request $request, $id)
