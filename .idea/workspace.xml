@@ -6,14 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf2b9a90-5c05-476a-862c-0f3ee74efcbf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Comment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_16_071034_create_comments_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_14_075032_add_column_role_id_to_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/nope/2020_10_14_075032_add_column_role_id_to_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/guest/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/guest/detail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +205,7 @@
       <workItem from="1602766387999" duration="12184000" />
       <workItem from="1602810977104" duration="2850000" />
       <workItem from="1602817702774" duration="1161000" />
-      <workItem from="1602824174240" duration="5838000" />
+      <workItem from="1602824174240" duration="6967000" />
     </task>
     <servers />
   </component>
